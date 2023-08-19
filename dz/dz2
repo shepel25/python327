@@ -1,0 +1,19 @@
+number = int(input("Введите пятизначное число :"))
+f = number
+e = number % 10
+# print(e)
+number = number // 10
+d = number % 10
+# print(d)
+number = number // 10
+c = number % 10
+# print(c)
+number = number // 10
+b = number % 10
+# print(b)
+a = number // 10
+# print(a)
+summ = a + b + c + d + e
+print("Произведение цифр введенного числа", f, ":", summ)
+res = summ / 5
+print("Среднее арифметическое числа", summ, ":", res)
