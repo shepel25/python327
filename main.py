@@ -402,14 +402,14 @@
 # print(r"C:\folder\file.txt"* '\\')
 
 
-name = "Дмитрий"
-age = 28
-print('Меня зовут', name, "мне", age, "лет", sep='')
-print('Меня зовут' + name + "мне" + str(age) + "лет", sep='')
-print(f'Меня зовут {name}. мне {age} лет.')
-
-printprint(f'Число: {round(10/3, 2)}')
-     print(f'Число: {10/3:.2f}')
+# name = "Дмитрий"
+# age = 28
+# print('Меня зовут', name, "мне", age, "лет", sep='')
+# print('Меня зовут' + name + "мне" + str(age) + "лет", sep='')
+# print(f'Меня зовут {name}. мне {age} лет.')
+#
+# printprint(f'Число: {round(10/3, 2)}')
+#      print(f'Число: {10/3:.2f}')
 
 
 
