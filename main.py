@@ -412,7 +412,7 @@
 #      print(f'Число: {10/3:.2f}')
 
 
-print("Hello Github")
+# print("Hello Github")
 
-
+print("Все получилось")
 
