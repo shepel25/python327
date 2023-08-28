@@ -450,3 +450,142 @@ import re
 # print(re.findall(req, s)) #['12', '', '', '', '', '', '', '', '', '', '', '2023', '', '', '', '', '', '4567', '891', '']
 # цифры выводятся а вместо букв пробельные символы
 
+#номера телефона
+
+# s = "+7 499 456 45 76, +74994564576, 7 (499) 456 4576, 74994564576"
+# reg = r"\+?7\d{10}"
+# print(re.findall(reg, s))
+
+# s = "Я ищу совпадения в 2023 году. И я их найду в 2 счета."
+# # reg = r'^\w+\s\w+'
+# reg = r'\w+\.$'
+# print(re.findall(reg, s))
+
+# def walidate_login(name):
+#     return re.findall(r'^[A-Za-z_-]{3,16}$', name)
+#
+#
+# print(walidate_login('Python_master'))
+# print(walidate_login('@#%Pyt'))
+
+
+#flags
+
+# print(re.findall(r'\w+', '12 + й'))
+# print(re.findall(r'\w+', '12 + й', flags=re.ASCII))
+
+# text = 'Hello world'
+# print(re.findall(r'\w+\+', text, flags=re.DEBUG))
+
+# s = 'Я ищу совпадения в 2023 году. И я их найду в 2 счета'
+# reg = 'я'
+# print(re.findall(reg, s, re.IGNORECASE))
+#
+# text = """
+# one
+# two
+# """
+# print(re.findall(r'one.\w+', text))
+# print(re.findall(r'one.\w+', text, flags=re.DOTALL))
+
+# print(re.findall('one$', text))
+# print(re.findall('one$', text, flags=re.MULTILINE))
+
+# print(re.findall("""[a-z_-]+ @[a-z_-]+""", 'test@mail.ru')) # если поставить пробел после + ничего не найдет
+# print(re.findall("""[a-z_-]+ @[a-z_-]+""", 'test@mail.ru', re.VERBOSE))# verbouse игнорирует пробелы
+# print(re.findall("""
+# [a-z_-]+# можно оставить свой комменарий
+# @       # можно оставить свой комменарий
+# [a-z_-]+# можно оставить свой комменарий
+# """, 'test@mail.ru', re.VERBOSE))
+
+#Занятие 16 часть 2
+
+# text = """Python,
+# python,
+# PYTHON
+# """
+# reg = '(?im)^python'
+# print(re.findall(reg, text))
+
+# text = '<body>Пример жадного соответстия регулярного выражения</body>'
+# print(re.findall('<.*?>', text)) # ленивый эелемент устанавливается чере ?
+# # ленивый элемент можем сделать только у кол-ва повторений *?, +?, ??
+# # {n, m}?, { ,n}?, {n, }?
+
+# s = "12 сентября 2023 год 4567891"
+# req = r'\d{2,4}?'
+# print(re.findall(req, s))
+
+# s = '<p>Изображение <img alt=картинка src=bg.jpg > - фон страницы </p>'
+# # reg = r'<img.*?>'
+# reg = r'<img[^>]*>'
+# print(re.findall(reg, s))
+#
+# s = '<p>Изображение <img src=bg.jpg > - фон страницы </p>'
+# # reg = r'<img.*?>'
+# reg = r'<img\s*[^>]*src\s*[^>]*>'
+# print(re.findall(reg, s))
+
+# s = 'Петр, Ольга и Виталий отлично учатся!'
+# reg = 'Петр|Ольга|Виталий|Николай'
+# print(re.findall(reg, s))
+
+# s = 'int = 4, float = 4.0, double = 8.0f'
+# reg = r'(?:int|double)\s*=\s*\d+[.\w+]*'
+# print(re.findall(reg, s))
+#
+# s = '127.0.0.1'
+# # s = '192.168.255.255'
+# # reg = r'\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}'
+# reg = r'(?:\d{1,3}.){3}\d{1,3}'
+# print(re.findall(reg, s))
+#
+# s = "Word2016, PS6, AI5"
+# reg = r'(([a-z]+)(\d+))'
+# print(re.findall(reg, s, re.I))
+
+# s = '5 + 7*2 - 4'
+# reg = r'\s*[+*-]\s*'
+# print(re.split(reg, s))
+#
+# s = '5 + 7*2 - 4'
+# reg = r'\s*([+*-])\s*'
+# print(re.split(reg, s))
+
+# a = '28-08-2021'
+# reg = r'(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(19[0-9][0-9]|20[0-9][0-9])'
+# print(re.findall(reg, a))
+
+# s = "Я ищу совпадение в 2023 году. И я их найду в 2 счета"
+# reg = r'(\d+)\s(\D+)'
+# print(re.search(reg, s).group())
+# m = re.search(reg, s)
+# print(m[1])
+# print(m[2])
+# print(m[0])
+
+# text = """
+# Самара
+# Москва
+# Тверь
+# Уфа
+# Казань
+# """
+# count = 0
+# def repl_find(n):
+#     global count
+#     count += 1
+#     return f"<option value='{count}'>{n.group(1)}</option>\n"
+#
+# print(re.sub(r'\s*(\w+)\s*', repl_find, text))
+
+
+
+
+
+
+
+
+
+
