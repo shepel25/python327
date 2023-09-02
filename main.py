@@ -581,11 +581,87 @@ import re
 # print(re.sub(r'\s*(\w+)\s*', repl_find, text))
 
 
+#Занятие 17
 
 
+# s = '<p>Изображение <img alt="картинка" src="bg.jpg" > - фон страницы </p>'
+# # reg = r'<img.*?>'
+# # reg = r'<img\s+[^>]*src\s*=\s+([\'"])(.+)\1>'
+# reg = r'<img\s+[^>]*src\s*=\s+([\'"])(.+)\1>' #(?P<name>...)(?p=name)
+# print(re.findall(reg, s))
+
+# s = "Самолет прилетает 10/23/2023. Будем рады видеть вас посде 10/24/2023"
+# reg = r'(\d{2})/(\d{2})/(\d{4})'
+# print(re.sub(reg, r'\2.\1.\3', s))#23.10.2023
+
+# s = "yandex.com and yandex.ru"
+# reg = r'(([a-z0-9-]{2,}\.)+[a-z]{2,4})'
+# print(re.sub(reg, r'http://\1', s))
+
+# Работа файлов
+
+# Текстовые и бинарные
+
+#Открытие файла "Open"
+
+# # f = open("C:/Users/New/PycharmProjects/pythonProject/test.txt")
+# f = open('test.txt')
+# print(f)
+# print(*f)
+
+# f = open('test.txt', 'r')
+# print(f.read(3))
+# f.close()
+#
+# f = open('test.txt', 'r')
+# print(f.read())
+# f.close()
+
+# f = open('text.txt', 'r')
+# print(f.readline()) #'\n'
+# print(f.readline(8))
+# print(f.readline())
+# print(f.readline())
+# f.close()
+
+# f = open('text.txt', 'r')
+# print(f.readlines(4))
+# print(f.readlines())
+# f.close()
+
+# f = open('text.txt', 'r')
+# for line in f:
+#     print(line)
+# f.close()
+
+# Определить кол-во строк в файле
+
+# count = 0
+# f = open('text.txt', 'r')
+# for line in f:
+#     count+=1
+# f.close()
+# print(count)
 
 
+# f = open('text.txt', 'r')
+# print(len(f.readlines()))
+# f.close()
 
+# f = open('xyz.txt', 'w')
+# f.write('Hello\nworld')
+# f.close()
 
+# f = open('xyz.txt', 'w') # w - если файл есть очистит и запишет информацию если файла нет он будет создан
+# print(f.write('New text.'))
+# f.close()
+#
+# f = open('xyz.txt', 'a') #a - дозапись в конец файла
+# print(f.write('\nNew text.'))
+# f.close()
 
+# f = open('xyz.txt', 'a')
+# lines = ['This is line 1', 'This is line 2']
+# print(f.writelines(lines))
+# f.close()
 
