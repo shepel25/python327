@@ -757,21 +757,21 @@ file_name = 'res_1.txt'
 #
 # print(langest_words('file.txt'))
 
-num = int(input('Введите номер удаляемой строки 1-3'))
-pos = num - 1
-
-f = open('dz17.txt', 'w')
-f.write('Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл')
-f.close()
-
-f = open('dz17.txt', 'r')
-read_file = f.readlines()
-print(read_file)
-del read_file[pos]
-print(read_file)
-f.close()
-
-f = open('dz17.txt', 'w')
-f.writelines(read_file)
-f.close()
+# num = int(input('Введите номер удаляемой строки 1-3'))
+# pos = num - 1
+#
+# f = open('dz17.txt', 'w')
+# f.write('Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл')
+# f.close()
+#
+# f = open('dz17.txt', 'r')
+# read_file = f.readlines()
+# print(read_file)
+# del read_file[pos]
+# print(read_file)
+# f.close()
+#
+# f = open('dz17.txt', 'w')
+# f.writelines(read_file)
+# f.close()
 
