@@ -665,3 +665,95 @@ import re
 # print(f.writelines(lines))
 # f.close()
 
+# f = open('xyz.txt', 'w')
+# lst = [str(i) for i in range(1, 20)]
+# print(lst)
+# for index in lst:
+#     f.write(index + '\t')
+# f.close()
+
+# Занятие 17 часть 2
+
+# f = open('text2.txt', 'w')
+# f.write('Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл;')
+# f.close()
+#
+# f = open('text2.txt', 'r')
+# read_file = f.readlines()
+# print(read_file)
+# read_file[1] = "Hello world"
+# print(read_file)
+# f.close()
+#
+# f = open('text2.txt', 'w')
+# f.writelines(read_file)
+# f.close()
+
+# f = open('test.txt')
+# print(f.read(3))
+# print(f.tell())# на какой позиции курсор
+# print(f.seek(1))# перемещает курсор в заданную позицию
+# print(f.read())
+# print(f.tell())
+# f.close()
+
+# f = open('test.txt', 'r+')
+# print(f.write("I am learning Python"))#20
+# print(f.seek(3))#I am learning Python
+# print(f.write('-new string-'))#12
+# print(f.tell())#15
+# f.close()
+
+# with open('test.txt', 'w+') as f:
+#     print(f.write('0123456789'))
+#
+# with open('test.txt', 'r+') as f:
+#     print(f.read())
+
+# with open('test.txt', 'r+') as f:
+#     for line in f:
+#         print(line[:6])
+
+file_name = 'res_1.txt'
+# lst = [4.5, 2.8, 3.9, 1.9, 0.3, 4.33, 7.777]
+#
+#
+# def get_line(lt):
+#     lt = list(map(str, lt))
+#     return ' '.join(lt)
+#
+#
+# with open('file_name', 'w') as f:
+#
+#     f.write(get_line(lst))
+# get_line(lst)
+# print('Done!')
+
+# with open('file_name', 'r') as f:
+#     nums = f.read()
+#
+# print(nums) #str
+#
+# nums_list = list(map(float, nums.split())) #list(map(float, ['4,5, 2,8, 3,9,1.0']))
+# # nums_list = nums.split()
+# print(nums_list)
+# # print(type(nums_list[0]))
+# print(type(nums_list[0]))
+
+# Написать функцию которая выводит слово из файла имеющее максимальную длину (или список слов если их несколько)
+
+# def langest_words(file):
+#     with open(file, 'r') as text:
+#         w = text.read().split()
+#         # print(w)
+#         max_langth = len(max(w, key=len))
+#         # print(max_langth)
+#         res = [word for word in w if len(word) == max_langth]
+#         # print(res)
+#         if len(res) ==1:
+#             return res[0]
+#         return res
+#
+#
+# print(langest_words('file.txt'))
+
