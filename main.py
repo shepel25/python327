@@ -421,7 +421,7 @@
 # Занятие 16
 
 import re
-
+import time
 
 # s = "05-03-1987 # Дата рождения"
 # print("Дата рождения:", re.sub("#.*", " ",s))
@@ -851,9 +851,85 @@ import os
 # remove_empty_dirs('nested1')
 
 
-import os.path
+# import os.path
 
-print(os.path.split(r'C:\Users\New\PycharmProjects\pythonProject\nested1\nested2\two.txt'))# Разбивает путь на кортежи
-#(путь и имя документа )
+# print(os.path.split(r'C:\Users\New\PycharmProjects\pythonProject\nested1\nested2\two.txt'))# Разбивает путь на кортежи
+# #(путь и имя документа )
+#
+# print(os.path.exists(r'C:\Users\New\PycharmProjects\pythonProject\nested1\nested2')) # Проверят существование указанного пути
 
-print(os.path.exists(r'C:\Users\New\PycharmProjects\pythonProject\nested1\nested2')) # Проверят существование указанного пути
+# Занятие 18 часть 2
+
+ # print(os.path.join(r'D:\Python', 'nested1', 'nested2', 'text.txt'))
+
+# dirs = [r'work\f1', r'work\f2\f21']
+# for d in dirs:
+#      os.makedirs(d)
+
+# files = {
+#      'work': ['w.txt'],
+#      r'work\f1': ['f11.txt', 'f12.txt', 'f13.txt'],
+#      r'work\f2\f21': ['f211.txt', 'f212.txt']
+# }
+# for d, file in files.items():
+#      for f in file:
+#           file_path = os.path.join(d, f)
+#           # print(file_path)
+#           open(file_path, 'w').close()
+#
+# file_with_text = [r'work\w.txt', r'work\f1\f12.txt', r'work\f2\f21\f211.txt', r'work\f2\f21\f212.txt']
+# for file in file_with_text:
+#      with open(file, 'w') as f:
+#           f.write(f'Какой-то текст для файла {file} ')
+#
+#
+# def print_tree(root, topdown):
+#      print(f'Обход {root} {"сверху вниз" if topdown else "снизу вверх"}')
+#      for root, dirs, files in os.walk(root, topdown=topdown):
+#           print(root)
+#           print(dirs)
+#           print(file)
+#      print('-' * 50)
+
+
+
+# print_tree('work', topdown=False)
+# print_tree('work', topdown=True)
+
+# path = 'main.py'
+# size = os.path.getsize(path) # Размер файла в байтах
+# print(size // 1024, 'KB')
+# ctime = os.path.getctime(path)
+# print(time.strftime('%d.%m.%Y, %H:%m:%S', time.localtime(ctime)))
+# print(os.path.getctime(path)) # Время создани файла в секундах
+# print(os.path.getatime(path)) # Время последнего доступа к файлу
+# print(os.path.getmtime(path)) # Время последнего изменения файла
+
+# file_path = 'nested1/nested2/three.txt'
+
+# if os.path.exists(file_path):
+#      dir0, name= os.path.split(file_path)
+#      atime = os.path.getatime(file_path)
+#      print(f'{name}({dir0}) - Время последнего доступа к файлу', atime, 'сек')
+#
+# else:
+#      print(f'Файл {file_path} не существует!')
+
+# file_path = 'nested1/nested2/three.txt'
+#
+# print(os.path.isfile(file_path)) # Возвращает True если путь является файлом
+# print(os.path.isdir(file_path)) # Возвращает True если путь является папкой
+
+# dir_name = 'nested1'
+#
+# objs = os.listdir(dir_name)
+# print(objs)
+#
+# for obj in objs:
+#      p = os.path.join(dir_name, obj)
+#      if os.path.isfile(p):
+#           print(f'{obj} - file - {os.path.getsize(p)} bytes')
+#      else:
+#           print(f'{obj} - dir')
+
+
