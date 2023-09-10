@@ -743,7 +743,7 @@ file_name = 'res_1.txt'
 # Написать функцию которая выводит слово из файла имеющее максимальную длину (или список слов если их несколько)
 
 # def langest_words(file):
-#     with open(file, 'r') as text:
+#     with open(file, 'r', encoding='UTF-8') as text:
 #         w = text.read().split()
 #         # print(w)
 #         max_langth = len(max(w, key=len))
@@ -775,3 +775,85 @@ file_name = 'res_1.txt'
 # f.writelines(read_file)
 # f.close()
 
+# Занятие 18
+
+# Работа с двумя файлами
+
+# text = 'Строка№1\nСтрока№2\nСтрока№3\nСтрока№3\nСтрока№4\nСтрока№5\nСтрока№6\nСтрока№7\nСтрока№8\nСтрока№9\nСтрока№10'
+#
+#
+# with open('one.txt','w') as f:
+#     f.write(text)
+#
+# read_file = 'one.txt'
+# write_file = 'two.txt'
+#
+# with open(read_file, 'r') as fr, open(write_file, 'w') as fw:
+#     for line in fr:
+#         line = line.replace('Строка', 'Линия - ')
+#         fw.write(line)
+
+# Запись данных из двух файлов в третий
+
+# read_file = 'one.txt'
+# write_file = 'two.txt'
+# res = 'three.txt'
+#
+# with open(read_file, 'r') as fr, open(write_file, 'r') as fw, open(res, 'w') as res:
+#     # f1 = fr.readlines() # Вариант 1
+#     # f2 = fw.readlines()
+#     # print(f1)
+#     # print(f2)
+#     # f3 = f1 + f2
+#     # res.writelines(f3)
+#     for i, j in zip(fr, fw): # Вариант 2
+#         print(i)
+#         print(j)
+#         res.write(i[:-1] + "->" + j) # Срез нужен для того чтобы убрать \n
+
+# Модуль OS (OS_PATH)
+
+import os
+
+# print("Текущая директория", os.getcwd()) # Путь к файлу
+# print(os.listdir()) # Список папок и файлов находящихся в текущей директории
+# print(os.listdir('..')) # .. Выйти на уровень выше
+
+# os.mkdir('folder1')# создать папку (только одну)
+# os.makedirs('nested1/nested2/nested3')# создает вложенные папки
+
+# os.remove('test.txt') # удаляет файл (совсем)
+# os.remove('folder/file.txt') # Удаляет файл в папке
+
+# os.rmdir() # Удаление папки
+# os.rmdir('folder1') # Удаляет только пустую папку
+
+# os.rename('xyz.txt','first.txt') # Переименовывает файл 1й параметр - старое название 2й новое название
+# os.rename('first.txt', 'nested1/first.txt') # Перемещает файл с переименованием и без
+# os.rename('folder', 'nested1/folder') # Может перемещать папку
+
+# for root, dirs, files in os.walk('nested1', topdown=True): # если указать false пойдет наоборот с самой вложенной папки
+#     print('Root:', root)
+#     print('Subdirs:', dirs)
+#     print('Files:', files)
+
+# def remove_empty_dirs(root_tree):
+#     print(f'Удаление пустых директорий в папке (root_tree)')
+#     print('-' * 30)
+#
+#     for root, dirs, files in os.walk(root_tree):
+#         if not os.listdir(root):
+#             os.rmdir(root)
+#             print(f'Директория (root) удалена')
+#
+#     print('-' * 30)
+#
+# remove_empty_dirs('nested1')
+
+
+import os.path
+
+print(os.path.split(r'C:\Users\New\PycharmProjects\pythonProject\nested1\nested2\two.txt'))# Разбивает путь на кортежи
+#(путь и имя документа )
+
+print(os.path.exists(r'C:\Users\New\PycharmProjects\pythonProject\nested1\nested2')) # Проверят существование указанного пути
