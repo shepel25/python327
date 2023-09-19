@@ -714,7 +714,7 @@ import time
 #     for line in f:
 #         print(line[:6])
 
-file_name = 'res_1.txt'
+# file_name = 'res_1.txt'
 # lst = [4.5, 2.8, 3.9, 1.9, 0.3, 4.33, 7.777]
 #
 #
@@ -922,14 +922,167 @@ import os
 
 # dir_name = 'nested1'
 #
-# objs = os.listdir(dir_name)
+# objs = os.listdir('nested1')
 # print(objs)
+# print(os.walk('.'))
+
+# objs = os.listdir('nested1')
 #
 # for obj in objs:
-#      p = os.path.join(dir_name, obj)
-#      if os.path.isfile(p):
-#           print(f'{obj} - file - {os.path.getsize(p)} bytes')
+#      print(obj)
+#      p = os.path.join('nested1', obj)
+#      # print(p)
+# k = sorted(objs, key=os.path.isfile)
+# print(k)
+# print(objs)
+
+
+
+     # if os.path.isfile(p):
+     #      print(f'{obj} - file - {os.path.getsize(p)} bytes')
+     # else:
+     #      print(f'{obj} - dir')
+
+
+# dir_name = "nested1"
+# objs = os.listdir(dir_name)
+# # print(objs)
+#
+# # for obj in objs:
+# #      p = os.path.join('nested1', obj)
+#      # if os.path.isfile(p):
+#      print(sorted(objs, key=os.path.isfile))
 #      else:
 #           print(f'{obj} - dir')
 
+# s = sorted( , key=os.path.isdir)
+# print(s)
+#
+# import os
+#
+# # Получаем список всех файлов и папок в корневой директории
+# items = "nested1"
+# objs = os.listdir(items)
+# print(objs)
+# # Разделяем файлы и папки
+# folders = []
+# files = []
+# for item in objs:
+#      p = os.path.join('nested1', item)
+#     # Если это папка, добавляем в список папок
+#     if os.path.isdir(item):
+#         folders.append(item)
+#     # Если это файл, добавляем в список файлов
+#     elif os.path.isfile(item):
+#         files.append(item)
+#
+# # Сортируем списки папок и файлов
+# folders = sorted(folders)
+# files = sorted(files)
+#
+# # Выводим на экран список папок
+# print("Папки:")
+# for folder in folders:
+#     print(folder)
+#
+# # Выводим на экран список файлов
+# print("\nФайлы:")
+# for file in files:
+#     print(file)
 
+
+     #      print(f'{objs} - file - {os.path.getsize(p)} bytes')
+     # else:
+     #      print(f'{objs} - dir')
+
+
+# Занятие 26 часть 2
+
+# class MySubClass(LoggerMixin, Displayer):
+#      def log(self, massage, filename=""):
+#           super().log(massage, filename="subClasslog.txt")
+#
+# subclass = MySubClass()
+# subclass.display("Строка будет печататься и сохранятся в файл")
+
+
+# class Goods:
+#      def __init__(self, name, weight, price):
+#           print("Init Goods")
+#           super().__init__()
+#           self.name = name
+#           self.weight = weight
+#           self.price = price
+#
+#      def print_info(self):
+#           print(f"{self.name}, {self.weight}, {self.price}")
+#
+#
+# class MixinLog:
+#      ID = 0
+#
+#      def __init__(self):
+#           print("Init MixinLog")
+#           MixinLog.ID += 1
+#           self.id = MixinLog.ID
+#
+#      def save_sell_log(self):
+#           print(f"{self.id}: товар был продан в 00:00 часов")
+#
+#
+# class NoteBook(Goods, MixinLog):
+#      pass
+#
+#
+# n = NoteBook("HP", 1.5, 35000)
+# n.print_info()
+# n.save_sell_log()
+
+# Перегрузка операторов
+
+# 24*60*60 = 86400(кол во секунд в дне)
+class Clock:
+     __Day = 86400
+
+     def __init__(self, sec: int):
+          if not isinstance(sec, int):
+               raise ValueError("Секунды должны быть числом")
+          self.sec = sec % self.__Day
+
+
+     def get_format_time(self):
+          s = self.sec % 60
+          m = (self.sec // 60) % 60
+          h = (self.sec // 3600) % 24
+          return  f"{Clock.__get_form(h)}:{Clock.__get_form(m)}:{Clock.__get_form(s)}"
+
+     @staticmethod
+     def __get_form(x):
+          return str(x) if x > 9 else "0" + str(x)
+
+     def __add__(self, other):
+          if not isinstance(other, Clock):
+               raise ArithmeticError("Правый операнд должен быть типом Clock")
+          return  Clock(self.sec + other.sec)
+
+     def __eq__(self, other):
+          if not isinstance(other, Clock):
+               raise ArithmeticError("Правый операнд должен быть типом Clock")
+          return self.sec == other.sec
+
+     def __ne__(self, other):
+          return not self.__eq__(other)
+
+c1 = Clock(100)
+c2 = Clock(100)
+if c1 == c2:
+     print("Время одинаковое")
+else:
+     print("Время разное")
+# c4 = Clock(300)
+# c3 = c1 + c2 + c4
+# c4 += c1 + c2
+print(c1.get_format_time())
+print(c2.get_format_time())
+# print(c4.get_format_time())
+# print(c3.get_format_time())
