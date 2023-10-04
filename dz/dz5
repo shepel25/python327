@@ -1,0 +1,13 @@
+s = []
+a = [int(input("->")) for i in range(int(input("n = ")))]
+
+print("Список:", a)
+
+for num in a:
+    # print(num)
+    if num > 0:
+        s.append(num)
+print("Список положительных элементов: ", s)
+
+max_num = max(s)
+print("Наибольшее число: ", max_num)

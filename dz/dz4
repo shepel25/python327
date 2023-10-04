@@ -1,0 +1,12 @@
+a = [int(input("->")) for i in range(int(input("n = ")))]
+print(a)
+summ = s = 0
+for i in range(len(a)):
+    if a[i] > 0:
+        s += 1
+    summ += a[i]
+arif_mean = summ / s
+
+print ("Среднее арифметическое: ", arif_mean)
+print("Сумма не нулевых элементов: ", summ)
+print("Кол-во элементов: ", s)

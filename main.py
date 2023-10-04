@@ -57,6 +57,446 @@
 # else:
 #     print("Введено неверное значение")
 
+# Занятие 4
+
+# Вложенные циклы
+
+# i = 1
+# while i < 5:
+#     print("Внешний цикл: i =", i)
+#     j = 1
+#     while j < 4:
+#         print("\tВнутренний цикл: j =", j)
+#         j += 1
+#     i += 1
+
+# i = 1
+# while i < 10:
+#     j = 1
+#     while j < 10:
+#         print(i, "*", j, "=", i * j, end="\t\t")
+#         j += 1
+#     print()
+#     i += 1
+
+# i = 1
+# while i <= 5:
+#     j = 1
+#     while j <= 16:
+#         if i % 2 :
+#             print("+", end="")
+#         else:
+#             print("-", end="")
+#         j += 1
+#     print()
+#     i += 1
+
+# i = 1
+# while i <= 5:
+#     j = 1
+#     while j <= 16:
+#         if j % 2:
+#             print("+", end="")
+#         else:
+#             print("-", end="")
+#         j += 1
+#     print()
+#     i += 1
+
+# for element in collection:
+#  тело цикла
+
+# for i in "Hello":
+#     print(i)
+
+# for color in 'red', 'blue', 'green':
+#     print(color)
+
+# for element in range(start, stop, step):
+
+# print(range(5))
+
+# for i in range(1, 15, 2):
+#     print(i, end="")
+# print()
+#
+# i = 1
+# while i < 15:
+#     print(i, end="")
+#     i += 1
+#
+# a = int(input("Введите целое число:"))
+# for i in range(1, a + 1):
+#     if a % i == 0:
+#         print(i, end=" ")
+
+# for i in range(1, 100):
+#     if i % 10  == i // 10:
+#         print(i, end=" ")
+
+# for i in range(3):
+#     print(i)
+# else:
+#     print("Done")
+#
+# for i in range(3):
+#     print(i)
+#     if i == 1:
+#         break
+# else:
+#     print("Done")
+#
+# for i in range(3):
+#     print("+++")
+#     for j in range(2):
+#         print("-----")
+
+# w = int(input("Введите ширину прямоугольника"))
+# h = int(input("Введите высоту прямоугольника"))
+# for i in range(h):
+#     for j in range(w):
+#         if i == 0 or j == 0 or i == h - 1 or j == w - 1:
+#             print("*", end=" ")
+#         else:
+#             print(" ", end=" ")
+#     print()
+
+
+# a = [letter * 2 for letter in "Hello"]
+# print(a)
+
+# num = [i for i in range(20)]
+# print(num)
+#
+# num = [i for i in range(20) if i % 2 == 0]
+# print(num)
+
+# Список (List)
+
+# nums = [8, 3, 4, 1, 9, "Hello", 2.5]
+# print(nums)
+# print(type(nums))
+# print(nums[0])
+# print(nums[6])
+# print(nums[-1])
+# print(nums[3])
+# nums[3] = 256
+# nums[0] += 108
+# print(nums)
+#
+# print(len(nums)) # len длина списка
+
+# s = []
+# print(s)
+#
+# b = list("Hello")
+# print(b)
+# print(type(b))
+
+# n = list(range(10))
+# print(n)
+
+# a = [0 for i in range(5)]
+# print(a)
+
+# a = [i for i in range(5)]
+# print(a)
+#
+# n = 5
+# a = [i ** 2 for i in range(n)]
+# print(a)
+#
+# a = [i * 3 for i in "list"]
+# print(a)
+#
+# a = [1, 2, 3]
+# b = [4, 5]
+# c = a + b
+# print(c)
+# d = c * 3
+# print(d)
+
+# a = [0] * int(input("Кол-во элементов в списке"))
+# print(a)
+# for i in range(len(a)):
+#     a[i] = input("->")
+#
+# print(a)
+
+# a = [input("->") for i in range(int(input("Кол-во элементов в списке: ")))]
+# print(a)
+
+# a = ['один', 'два', 'три', 'четыре', 'пять']
+# for i in range(len(a)):
+#     print(a[i], end=" ")
+# print()
+
+# for el in a:
+#     print(el, end=" ")
+
+# a =[int(input('->')) for i in range(int(input("n =")))]
+# print(a)
+# s = 0
+# # for i in range(len(a)):
+# #     if a[i] < 0:
+# #         s += a[i]
+#
+# for i in a:
+#     if i < 0:
+#         s += i
+# print("Сумма отрицательных элементов: ", s)
+
+# n = list(range(21, 41))
+# print(n)
+# k = s = 0
+# for i in range(len(n)):
+#     if n[i] % 2 == 0:
+#         k += 1
+#
+#     else:
+#         s += n[i]
+#
+# print("Кол-во четных элементов: ", k)
+# print("Сумма нечетных элементов: ", s)
+
+# a = [int(input("->")) for i in range(int(input("n = ")))]
+# print(a)
+# for i in range(1, len(a)):
+#     if a[i] > a[i - 1]:
+#         print(a[i], end=" ")
+
+# a = [int(input("->")) for i in range(int(input("n = ")))]
+# print(a)
+# summ = s = 0
+# for i in range(len(a)):
+#     if a[i] > 0:
+#         s += 1
+#     summ += a[i]
+# arif_mean = summ / s
+#
+# print ("Среднее арифметическое: ", arif_mean)
+# print("Сумма не нулевых элементов: ", summ)
+# print("Кол-во элементов: ", s)
+
+# Занятие 5
+
+# Модули
+
+# import math
+#
+# num1 = math.sqrt(4)
+# num2 = math.ceil(3.2)
+# num3 = math.floor(3.8)
+# num4 = math.pi
+# print(num1)
+# print(num2)
+# print(num3)
+# print(num4)
+
+# псевдоним
+
+# import math as m
+#
+# num2 = m.ceil(3.2)
+# num3 = m.floor(3.8)
+# print(num2)
+# print(num3)
+
+# from math import ceil, floor
+#
+# num2 = ceil(3.2)
+# num3 = floor(3.8)
+# print(num2)
+# print(num3)
+
+# import time
+# import locale
+
+# sec = time.time()
+# print(sec)
+# local = time.ctime()
+# print(local)
+# res = time.localtime()
+# print(res)
+# print(res.tm_year)
+# print(res.tm_mon)
+
+# locale.setlocale(locale.LC_ALL, "ru")
+
+# print(time.strftime("Today is %b %d %Y", time.localtime(789878098)))
+# print(time.strftime("Today is %b %d %Y"))
+# print(time.strftime('%d/%m/%y, %H:%M:%S'))
+
+# print("Программа запустилась...")
+# time.sleep(5)# sleep приостанавливает выполнение программы на заданное кол-во секунд
+# print("Программа завершилась")
+#
+# start = time.time()
+# time.sleep(5)
+# finish = time.time()
+# print("Время выполнения программы", finish - start, "секунд"
+
+# start = time.monotonic()
+# time.sleep(5)
+# finish = time.monotonic()
+# print("Время выполнения программы", finish - start, "секунд")
+
+# Срезы: список (start:stop:step)
+
+# s = [5, 9, 3, 7, 1, 8]
+# print(s[::-1])
+# print(s[0:-1:2])
+# print(s[0:6:1])
+
+# s = [1, 2, 3, 4, 5, 6, 7]
+# print(s[::-1])
+# print(s[::2])
+# print(s[1::2])
+# print(s[0:1:])
+# print(s[6::])
+# print(s[-1:])
+# print(s[3:4:])
+# print(s[3:])
+# print(s[4:1:-1])
+# print(s[2:5])
+
+# s = [1, 2, 3, 4, 5, 6, 7]
+# print(s)
+# ...
+# s [1:3] = [0, 0, 0, 0]
+# print(s)
+# s[1:2] = [20]
+# print(s)
+# s[3:5] = []
+# print(s)
+# del s[:]
+# print(s)
+
+# Методы списков
+
+# s = [1, 2, 3, 4, 5, 6, 7]
+# s[6] = 8
+# print(s)
+# s.append(99) # Добавляет один элемент в конец списка
+# s.extend([8, 9, 10]) # Добавляет в список набор элементов
+# s.extend("add") # Добавляет строчные элементы побуквенно
+# s.insert(0, 100) # Добавляет элемент в заданный индекс со сдвигом элементов
+# # Первый параметр индекс второй параметр добавляемый элемент
+# print(s)
+
+# s = []
+# n = int(input("Кол-во элементов в списке: "))
+# for num in range(n):
+#     x = int(input("Введите число: "))
+#     s.append(x)
+# print(s) # [1, 2, 3]
+
+# s = []
+# n = int(input("Кол-во элементов в списке: "))
+# for num in range(n):
+#     x = int(input("Введите число: "))
+#     s.insert(0, x)
+# print(s) # [3, 2, 1]
+
+# s = []
+# n = int(input("Кол-во элементов в списке: "))
+# for num in range(n):
+#     x = int(input("Введите число: "))
+#     if x % 3 == 0:
+#         s.append(x)
+#     else:
+#         print(x, "Данное число не делится на 3 без остатка")
+# print(s)
+
+# a = [5, 9, 2, 1, 4, 3]
+# b = [4, 2, 1, 3, 7]
+# c = []
+# for i in a:
+#     for j in b:
+#         if i in c:
+#             continue
+#         if i == j:
+#             c.append(i)
+#             break
+# print(c)
+
+# a = [1, 2, 3]
+# b = [11, 22, 33]
+# c = []
+#
+# for i in range(len(a)):
+#     c.append(a[i])
+#     c.append(b[i])
+#
+# print(c)
+
+# a = [1, 2, 3, 44, 55]
+# b = [11, 22, 33]
+# c = []
+# if len(b) > len(a):
+#     for i in range(len(a)):
+#         c.append(a[i])
+#         c.append(b[i])
+#     for i in range(len(a), len(b)):  # range(3,5)
+#         c.append(b[i])
+# else:
+#     for i in range(len(b)):
+#         c.append(a[i])
+#         c.append(b[i])
+#     for i in range(len(b), len(a)):  # range(3,5)
+#         c.append(a[i])
+# print(c)
+
+# a = [1, 2, 3, 44, 55]
+# b = [11, 22, 33]
+# c = []
+# if len(a) > len(b):
+#     a, b = b, a
+# for i in range(len(a)):
+#     c.append(a[i])
+#     c.append(b[i])
+# for i in range(len(a), len(b)):  # range(3,5)
+#         c.append(b[i])
+#
+# print(c)
+
+# s = [4, 0, 2, 0, 3, 6, 8, 0, 7]
+# s.remove(0) # Удаляет первый найденный элемент из списка по значению
+# print(s)
+# last = s.pop(-3) # Удаляет последний элемент из списка если не указывать индекс
+# print(last)
+# print(s)
+# s.clear()
+# print(s) # Очищает список полностью
+#
+# a = [int(input("->")) for i in range(int(input("n = ")))]
+# print(a)
+# print("Введите индекс: ")
+# k = int(input("k= "))
+# a.pop(k)
+# print(a)
+
+# s = [4, 0, 2, 0, 3, 6, 8, 0, 7]
+# print(s)
+# # num = s.count(5) # Считает кол-во заданных элементов в списке
+# # print(num)
+# ind = s.index(0, 2) # Возвращает индекс первого найденного элемента по его значению , если значения нет ValueError
+# print(ind)
+
+s = []
+a = [int(input("->")) for i in range(int(input("n = ")))]
+
+print("Список:", a)
+
+for num in a:
+    # print(num)
+    if num > 0:
+        s.append(num)
+print("Список положительных элементов: ", s)
+
+max_num = max(s)
+print("Наибольшее число: ", max_num)
+
 # занятие 11
 
 # домашнее задание
@@ -417,6 +857,131 @@
 # print("Все получилось")
 
 # print("Стока созданная в новом репозитории")
+
+# Занятие 14
+
+# def avg(fn):
+#      def wrap(*args):
+#          # a = ""
+#          # for i in args: # Вариант 1
+#          #     a += str(i) + ", "
+#          a = ", ".join(map(str, args)) # Вариант 2
+#          print("Среднее арифметическое:", a[:-2], "=", fn(*args)/len(args))
+#
+#      return wrap
+#
+# @avg
+# def summa(*args):
+#      a = ""
+#      for i in args:
+#           a += str(i) + ", " # 2,3,3,4,
+#      print("Сумма чисел:", a[:-2], "=", sum(args))
+#      return sum(args)
+#
+#
+# summa(2, 3, 3, 4)
+
+# print("Строка разделенная пробелами:".split()) # Разбивает стоку на список подстрок
+# print("www.python.org.ru".split(".", 2))
+# print("www.python.org.ru".rsplit(".", 2))
+# print("     ру".lstrip()) # Убирает пробелы слева до первого символа
+# print("ру    ".rstrip())# Удаляет пробельные символы справа
+# print("    ру   ".strip())
+# print("http://www.python.org".lstrip("/:pths"))
+# print("http://www.python/.org".lstrip("/:pths").rstrip("org"))
+# print("http://www.python/.org".strip("/:pthsorg"))
+#
+# s = "Я изучаю Nython. Мне нравится Nython. Nython очень интересный язык программирования"
+# print(s.replace('Nython', 'Python', 2)) #Поиск и замена
+
+# join - Преобразует итерируемый обьект в строку
+# s = '_'
+# seq = ('a','b','c')
+# print(s.join(seq))
+#
+# print("...".join(['1', '99']))
+
+# a = input("->").split()
+# print(a)
+
+# a = input("Введите ФИО: ").split()
+# print(a)
+# print(f'{a[0]} {a[1][0]}. {a[2][0]}.')
+
+# Занятие 14 часть 2
+
+# Регулярные выражения
+
+import re
+
+# s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
+# reg = 'совпадения'
+# print(re.findall(reg, s)) # findall возвращает список всех найденных совпадений
+# print(re.search(reg, s)) # Возвращает первое совпадение с искомым шабдоном
+# print(re.search(reg, s).span())
+# print(re.search(reg, s).start())
+# print(re.search(reg, s).end())
+# print(re.search(reg, s).group())
+# print(re.match(reg, s).)# Возвращает первое совпадение с искомым шаблоном только в начале строки
+
+import re
+
+# s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
+# reg = ' '
+# ...
+# s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
+# reg = '[иае]'
+# ...
+# print(re.split(reg, s, 5))
+
+#Метод для поиска и замены
+#
+# s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
+# reg = '\\.'# reg = r'.'
+#
+# print(re.findall(reg, s))# findall возвращает список всех совпадений или []
+# print(re.search(reg, s))# search возвращает первое совпадение с искомым шаблоном
+# print(re.search(reg, s).span())
+# print(re.search(reg, s).start())
+# print(re.search(reg, s).end())
+# print(re.search(reg, s).group())
+# print(re.match(reg, s))#match возвращает первое совпадение с искомым шаблоном только в начале строки
+#
+# print(re.split(reg, s, 5))#Разбивает строку на список подстрок по заданному шаблону
+#
+# print(re.sub(reg, "!", s))
+
+# Шаблоны регулярных выражений
+
+# s = "Я ищу совпадения в 2023 году. И [^] я их найду в 2 счёта.47896"
+# reg = r'[203]'
+# reg = r'[0-9]'
+# reg = r'[12][0-9][0-9][0-9]'#[2023]
+# reg = r'[а-яё]'
+# reg = r'[А-ЯЁа-яё]'
+# reg = r'[\[^\].]'
+# reg = r'[^0-9]'
+
+# ...
+#
+# print(re.findall(reg, s))
+# print(ord("А"))
+# print(ord("Я"))
+# print(ord("я"))
+
+# s = "Час в24-часовом формате от 00 до 23. 2021-06-15:21:45. Минуты в диапазоне от 00 до 59. 2021-06-15:01:09 "
+# reg = r'[0-2][0-9]:[0-5][0-9]'
+# print(re.findall(reg, s))
+
+# s = "Я ищу совпадения в 2023 году. И [^] я их найду в 2 счёта.47896"
+# reg = r'\AЯ ищу'
+# # reg = r'\d\w\s'
+#
+# print(re.findall(reg, s))
+#\d - одна любая ц))ифра
+# \w - буквы, цифры, символ подчеркивания
+# \s - символ пробельный , табуляция , перенос на другую строку
+# \D\W\S - в верхнем регистре выполняет противоположное действие букве в нижнем регистре
 
 # Занятие 16
 
@@ -1041,48 +1606,48 @@ import os
 # Перегрузка операторов
 
 # 24*60*60 = 86400(кол во секунд в дне)
-class Clock:
-     __Day = 86400
-
-     def __init__(self, sec: int):
-          if not isinstance(sec, int):
-               raise ValueError("Секунды должны быть числом")
-          self.sec = sec % self.__Day
-
-
-     def get_format_time(self):
-          s = self.sec % 60
-          m = (self.sec // 60) % 60
-          h = (self.sec // 3600) % 24
-          return  f"{Clock.__get_form(h)}:{Clock.__get_form(m)}:{Clock.__get_form(s)}"
-
-     @staticmethod
-     def __get_form(x):
-          return str(x) if x > 9 else "0" + str(x)
-
-     def __add__(self, other):
-          if not isinstance(other, Clock):
-               raise ArithmeticError("Правый операнд должен быть типом Clock")
-          return  Clock(self.sec + other.sec)
-
-     def __eq__(self, other):
-          if not isinstance(other, Clock):
-               raise ArithmeticError("Правый операнд должен быть типом Clock")
-          return self.sec == other.sec
-
-     def __ne__(self, other):
-          return not self.__eq__(other)
-
-c1 = Clock(100)
-c2 = Clock(100)
-if c1 == c2:
-     print("Время одинаковое")
-else:
-     print("Время разное")
-# c4 = Clock(300)
-# c3 = c1 + c2 + c4
-# c4 += c1 + c2
-print(c1.get_format_time())
-print(c2.get_format_time())
-# print(c4.get_format_time())
-# print(c3.get_format_time())
+# class Clock:
+#      __Day = 86400
+#
+#      def __init__(self, sec: int):
+#           if not isinstance(sec, int):
+#                raise ValueError("Секунды должны быть числом")
+#           self.sec = sec % self.__Day
+#
+#
+#      def get_format_time(self):
+#           s = self.sec % 60
+#           m = (self.sec // 60) % 60
+#           h = (self.sec // 3600) % 24
+#           return  f"{Clock.__get_form(h)}:{Clock.__get_form(m)}:{Clock.__get_form(s)}"
+#
+#      @staticmethod
+#      def __get_form(x):
+#           return str(x) if x > 9 else "0" + str(x)
+#
+#      def __add__(self, other):
+#           if not isinstance(other, Clock):
+#                raise ArithmeticError("Правый операнд должен быть типом Clock")
+#           return  Clock(self.sec + other.sec)
+#
+#      def __eq__(self, other):
+#           if not isinstance(other, Clock):
+#                raise ArithmeticError("Правый операнд должен быть типом Clock")
+#           return self.sec == other.sec
+#
+#      def __ne__(self, other):
+#           return not self.__eq__(other)
+#
+# c1 = Clock(100)
+# c2 = Clock(100)
+# if c1 == c2:
+#      print("Время одинаковое")
+# else:
+#      print("Время разное")
+# # c4 = Clock(300)
+# # c3 = c1 + c2 + c4
+# # c4 += c1 + c2
+# print(c1.get_format_time())
+# print(c2.get_format_time())
+# # print(c4.get_format_time())
+# # print(c3.get_format_time())
