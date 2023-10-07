@@ -483,19 +483,207 @@
 # ind = s.index(0, 2) # Возвращает индекс первого найденного элемента по его значению , если значения нет ValueError
 # print(ind)
 
-s = []
-a = [int(input("->")) for i in range(int(input("n = ")))]
+# s = []
+# a = [int(input("->")) for i in range(int(input("n = ")))]
+#
+# print("Список:", a)
+#
+# for num in a:
+#     # print(num)
+#     if num > 0:
+#         s.append(num)
+# print("Список положительных элементов: ", s)
+#
+# max_num = max(s)
+# print("Наибольшее число: ", max_num)
 
-print("Список:", a)
 
-for num in a:
-    # print(num)
-    if num > 0:
-        s.append(num)
-print("Список положительных элементов: ", s)
+# Занятие 6
 
-max_num = max(s)
-print("Наибольшее число: ", max_num)
+# a = [1, 2, 3]
+# # b = a
+# b = a.copy()
+# print("a =", a, id(a))
+# print("b =", b, id(b))
+# a.append(20)
+# print("a =", a, id(a))
+# print("b =", b, id(b))
+# b.append(30)
+# print("a =", a, id(a))
+# print("b =", b, id(b))
+
+# a = [1, 2, 3]
+# a.reverse() # revers - перестраивает элементы в обратном порядке
+# print(a)
+
+# s = [9, 7, 3, 6, 4, 2, 8]
+# s.sort() # sort - сортировка (по умолчанию по возрастанию)
+# print(s)
+# s = [9, 7, 3, 6, 4, 2, 8]
+# s.sort(reverse=True) # sort - сортировка по убыванию
+# print(s)
+# s2 = ["Виталий", "Сергей", "Анна", "Александр"]
+# # s2.sort()
+# s2.sort(key=len, reverse=True)
+# print(s2)
+
+# s = [9, 7, 3, 6, 4, 2, 8]
+# s.sort()
+# print(s)
+#
+# s2 = [9, 7, 3, 6, 4, 2, 8]
+# s3 = sorted(s2)
+# print(s3)
+# print(s2)
+
+# Генерация случайных данных
+
+import random
+from  random import *
+
+# print(random.random())
+# print(random.randint(0, 9)) # 0, 9 указанный диапазон , конечное значение включается
+# print(random.randrange(1, 9, 2)) # (start , stop , step) 1, 9 диапазон , 2 - каждое второе число
+# print(uniform(10.5, 25.5))
+# print(round(uniform(10.5, 25.5), 2))
+
+# city = ['Москва', 'Новосибирск', 'Воронеж', 'Сочи', 'Екактеринбург']
+# # print(choice(city)) # choise - возращает один элемент
+# # print(choices(city)) # choises - вовращает элемент в виде списка
+# print(choices(city, k=3))
+#
+# s = [55, 66, 77, 88, 99, 4, 7, 9, 4, 5, 6, 1, 2, 7, 3]
+# # print(choice(s))
+# # print(choices(s))
+# print(choices(s, k=5))
+
+# a = [randint(50, 100) for i in range(10)]
+# print(a)
+
+# lst = [5, 3, 4, 2, 1, 8]
+# print(len(lst))
+# print(min(lst))
+# print(max(lst))
+# print(sum(lst))
+#
+# a = [randint(50, 100) for i in range(10)]
+# print(a)
+# m = max(a)
+# print("Max:", m)
+# a.remove(m)
+# print(a)
+# a.insert(0, m)
+# print(a)
+
+# a = [randint(50, 100) for i in range(10)]
+# print(a)
+# m = min(a)
+# print("Min", m)
+# ind = a.index(m)
+# print(ind)
+# del a[:ind]
+# print(a)
+# b = a[ind:]
+# print(b)
+
+# x = list('1a2b3c4d')
+# print(x)
+# print('a' in x)
+# print('i' in x)
+# print('a' not in x)
+# print('i' not in x)
+
+# lst = []
+# # if len(lst) == 0:
+# #     print("Список пустой")
+#
+# if not lst:
+#     print("Список пустой")
+#
+# print(bool(lst))  # False
+
+# n1 = int(input("Ввелите размер первого списка: "))
+# n2 = int(input("Ввелите размер второго списка: "))
+# a = [randint(0, 10) for i in range(n1)]
+# b = [randint(0, 10) for _ in range(n2)]
+# print("Первый список: ", a)
+# print("Второй список: ", b)
+# # c = a + b
+# # print("Третий список:", c)
+# c = []
+# for i in range(len(a)):
+#     if a[i] not in c:
+#         c.append(a[i])
+# for i in range(len(b)):
+#     if b[i] not in c:
+#         c.append(b[i])
+#
+# print("Третий список: ", c)
+#
+# c = []
+# for i in range(n1):
+#     if a[i] in b and a[i] not in c:
+#         c.append(a[i])
+#
+# print("Третий список: ", c)
+#
+# c = [min(a), min(b), max(a), max(b)]
+# print("Третий список: ", c)
+
+# Вложенные списки
+
+# m = [
+#     [1, 2, 3, 4],
+#     [5, 6, 7, 8],
+#     [9, 10, 11, 12]
+#
+# ]
+# print(m)
+# print(len(m))
+# print(m[1][2])
+#
+# s = ["Hello", 2]
+# print(s[0][1])
+
+# m = [
+#     [1, 2, 3, 4],
+#     [5, 6, 7, 8],
+#     [9, 10, 11, 12]
+# ]
+# print(m)
+# print()
+# for row in range(len(m)):
+#     print(m[row])
+#     for cel in range(len(m[row])):
+#         print(m[row][cel], end="\t\t")
+#     print()
+# for row in m:
+#     # print(row)
+#     for x in row:
+#         print(x, end="\t\t")
+#     print()
+
+# for x, y in [[1, 2], [3, 4], [5, 6], [7, 8]]:
+#     print(x, "+", y, "=", x + y)
+
+# w, h = 5, 4
+# matrix = [[randint(1, 30) for x in range(w)] for y in range(h)]
+# for row in matrix:
+#     for x in row:
+#         print(x, end="\t\t")
+#     print()
+
+# w, h = 3, 4
+# s = 0
+# matrix = [[randint(-30, 30) for x in range(w)] for y in range(h)]
+# for row in matrix:
+#     for x in row:
+#         if x < 0:
+#             s += 1
+#         print(x, end="\t\t")
+#     print()
+# print(s)
+
 
 # занятие 11
 
