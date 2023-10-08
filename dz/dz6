@@ -1,0 +1,29 @@
+matrix2 = [randint(0, 10) for i in range(6)]
+
+w, h = 6, 6
+
+matrix = [[randint(0, 10) for x in range(w)] for y in range(h)]
+
+for row in matrix:
+    for x in row:
+
+        print(x, end="\t\t")
+        # print(x, end="\t\t")
+    print()
+del matrix[1:6:2]
+matrix.insert(1, matrix2)
+matrix.insert(3, matrix2)
+matrix.insert(5, matrix2)
+
+print(matrix2, end="\t\t")
+print()
+
+
+matrix3 = matrix.copy()
+
+for row in matrix:
+    for x in row:
+
+        print(x, end="\t\t")
+
+    print()
