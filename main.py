@@ -685,37 +685,37 @@ from  random import *
 # print(s)
 
 
-# matrix2 = [randint(0, 10) for i in range(6)]
-#
-# w, h = 6, 6
-#
-# matrix = [[randint(0, 10) for x in range(w)] for y in range(h)]
-#
-# for row in matrix:
-#     for x in row:
-#
-#         print(x, end="\t\t")
-#         # print(x, end="\t\t")
-#     print()
-#
-# for i in range(len(matrix)):
-#     # print(i)
-#     if i % 2 != 0:
-#         del (matrix[i])
-#         matrix.insert(i, matrix2)
-#
-# print(matrix2, end="\t\t")
-# print()
-#
-#
-# matrix3 = matrix.copy()
-#
-# for row in matrix:
-#     for x in row:
-#
-#         print(x, end="\t\t")
-#
-#     print()
+matrix2 = [randint(0, 10) for i in range(6)]
+
+w, h = 6, 6
+
+matrix = [[randint(0, 10) for x in range(w)] for y in range(h)]
+
+for row in matrix:
+    for x in row:
+
+        print(x, end="\t\t")
+        # print(x, end="\t\t")
+    print()
+
+for i in range(len(matrix)):
+    # print(i)
+    if i % 2 != 0:
+        del (matrix[i])
+        matrix.insert(i, matrix2)
+
+print(matrix2, end="\t\t")
+print()
+
+
+matrix3 = matrix.copy()
+
+for row in matrix:
+    for x in row:
+
+        print(x, end="\t\t")
+
+    print()
 
 #
 # lst = [randint(0, 10) for i in range(10)]
@@ -723,13 +723,95 @@ from  random import *
 #
 # print(lst)
 
+# Функции
+
+# def hello(): # Принимаемые аргументы
+#     print("Hello")
+#
+#
+# hello()
 
 
+# def hello(name, word):
+#     print(("Hello", name, "Say", word))
+#
+#
+# hello("Irina", "hi") # Параметры
+# hello("Ivan", "hello")
+
+# def get_sum(a, b):
+#     print(a + b)
+#
+#
+# m = 2
+# n = 3
+# get_sum(m, n)
+# c = 5
+# d = 6
+# get_sum(c, d)
+# get_sum(2, 3)
+# get_sum("1", "2")
+
+# def symbol(count, a, b):
+#     for i in range(count): # i= 0,1,2,3,4,5,6,7
+#         if i % 2 == 0:
+#             print(a, end="")
+#         else:
+#             print(b, end="")
+#     print()
+#
+# symbol(9, "+", "-")
+# symbol(7, "X", "Y")
+#
+#
+# def get_sum(a, b):
+#     return a + b
+#
+#
+# n = 2
+# m = 3
+# res = get_sum(n, m)
+# print(res ** 2)
 
 
+# def add(x, y):
+#     if x > y:
+#         return  x - y
+#     # else:
+#     #     return x + y
+#     return x + y # Вариант 2 без else
+# a = int(input("a =",))
+# b = int(input("b ="))
+# m = add(a, b)
+# print("результат:", m)
 
 
+# def cube(a):
+#     return a*a*a
+# for i in range(1, 11):
+#     print(i, "В кубе", cube(i))
 
+
+# def change(lst):
+#     lst[0], lst[-1] = lst[-1], lst[0]
+#     return lst
+#
+#
+# print(change([1, 2, 3]))
+# print(change([9, 12, 33, 54, 105]))
+# print(change(['с', 'л', 'о', 'н']))
+
+
+def change(lst):
+    a = lst.pop()
+    b = lst.pop(0)
+    lst.append(b)
+    lst.insert(0, a)
+    return lst
+
+print(change([1, 2, 3]))
+print(change([9, 12, 33, 54, 105]))
+print(change(['с', 'л', 'о', 'н']))
 
 # занятие 11
 
