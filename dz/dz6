@@ -10,10 +10,12 @@ for row in matrix:
         print(x, end="\t\t")
         # print(x, end="\t\t")
     print()
-del matrix[1:6:2]
-matrix.insert(1, matrix2)
-matrix.insert(3, matrix2)
-matrix.insert(5, matrix2)
+
+for i in range(len(matrix)):
+    # print(i)
+    if i % 2 != 0:
+        del (matrix[i])
+        matrix.insert(i, matrix2)
 
 print(matrix2, end="\t\t")
 print()

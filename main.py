@@ -683,55 +683,54 @@ from  random import *
 #         print(x, end="\t\t")
 #     print()
 # print(s)
-matrix2 = [randint(0, 10) for i in range(6)]
-
-w, h = 6, 6
-
-matrix = [[randint(0, 10) for x in range(w)] for y in range(h)]
-
-for row in matrix:
-    for x in row:
-
-        print(x, end="\t\t")
-        # print(x, end="\t\t")
-    print()
-del matrix[1:6:2]
-matrix.insert(1, matrix2)
-matrix.insert(3, matrix2)
-matrix.insert(5, matrix2)
-
-print(matrix2, end="\t\t")
-print()
 
 
-matrix3 = matrix.copy()
-
-for row in matrix:
-    for x in row:
-
-        print(x, end="\t\t")
-
-    print()
-
-# print(matrix3)
-# for ind in matrix3:
-#     print(ind)
-    # if ind % 2 != 0:
-    #     print(ind)
-
-# if matrix3.index() % 2 != 0:
-
-
-# matrix3 = matrix
+# matrix2 = [randint(0, 10) for i in range(6)]
+#
+# w, h = 6, 6
+#
+# matrix = [[randint(0, 10) for x in range(w)] for y in range(h)]
+#
 # for row in matrix:
 #     for x in row:
 #
 #         print(x, end="\t\t")
-#     print
-# a = [matrix.insert(1, matrix2)]
-# print(a)
-# matrix3 = matrix
-# print(matrix3)
+#         # print(x, end="\t\t")
+#     print()
+#
+# for i in range(len(matrix)):
+#     # print(i)
+#     if i % 2 != 0:
+#         del (matrix[i])
+#         matrix.insert(i, matrix2)
+#
+# print(matrix2, end="\t\t")
+# print()
+#
+#
+# matrix3 = matrix.copy()
+#
+# for row in matrix:
+#     for x in row:
+#
+#         print(x, end="\t\t")
+#
+#     print()
+
+#
+# lst = [randint(0, 10) for i in range(10)]
+# if lst[i] == lst[i]+1:
+#
+# print(lst)
+
+
+
+
+
+
+
+
+
 # занятие 11
 
 # домашнее задание
