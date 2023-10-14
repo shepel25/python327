@@ -23,7 +23,7 @@
 #                 print("Осень")
 # else:
 #     print("Ошибка ввода")
-
+import math
 # number = int(input("Введите пятизначное число :"))
 # f = number
 # e = number % 10
@@ -539,7 +539,7 @@
 # Генерация случайных данных
 
 import random
-from  random import *
+from random import *
 
 # print(random.random())
 # print(random.randint(0, 9)) # 0, 9 указанный диапазон , конечное значение включается
@@ -685,37 +685,37 @@ from  random import *
 # print(s)
 
 
-matrix2 = [randint(0, 10) for i in range(6)]
-
-w, h = 6, 6
-
-matrix = [[randint(0, 10) for x in range(w)] for y in range(h)]
-
-for row in matrix:
-    for x in row:
-
-        print(x, end="\t\t")
-        # print(x, end="\t\t")
-    print()
-
-for i in range(len(matrix)):
-    # print(i)
-    if i % 2 != 0:
-        del (matrix[i])
-        matrix.insert(i, matrix2)
-
-print(matrix2, end="\t\t")
-print()
-
-
-matrix3 = matrix.copy()
-
-for row in matrix:
-    for x in row:
-
-        print(x, end="\t\t")
-
-    print()
+# matrix2 = [randint(0, 10) for i in range(6)]
+#
+# w, h = 6, 6
+#
+# matrix = [[randint(0, 10) for x in range(w)] for y in range(h)]
+#
+# for row in matrix:
+#     for x in row:
+#
+#         print(x, end="\t\t")
+#         # print(x, end="\t\t")
+#     print()
+#
+# for i in range(len(matrix)):
+#     # print(i)
+#     if i % 2 != 0:
+#         del (matrix[i])
+#         matrix.insert(i, matrix2)
+#
+# print(matrix2, end="\t\t")
+# print()
+#
+#
+# matrix3 = matrix.copy()
+#
+# for row in matrix:
+#     for x in row:
+#
+#         print(x, end="\t\t")
+#
+#     print()
 
 #
 # lst = [randint(0, 10) for i in range(10)]
@@ -802,19 +802,224 @@ for row in matrix:
 # print(change(['с', 'л', 'о', 'н']))
 
 
-def change(lst):
-    a = lst.pop()
-    b = lst.pop(0)
-    lst.append(b)
-    lst.insert(0, a)
-    return lst
+# def change(lst):
+#     a = lst.pop()
+#     b = lst.pop(0)
+#     lst.append(b)
+#     lst.insert(0, a)
+#     return lst
+#
+# print(change([1, 2, 3]))
+# print(change([9, 12, 33, 54, 105]))
+# print(change(['с', 'л', 'о', 'н']))
 
-print(change([1, 2, 3]))
-print(change([9, 12, 33, 54, 105]))
-print(change(['с', 'л', 'о', 'н']))
+
+# def func(x, y):
+#     if x > y:
+#         return True
+#     else:
+#         return False
+#
+#
+# print(func(5, 10))
+# print(func(10, 5))
+#
+#
+# a = 5
+# b = 2
+# if func(a, b):
+#     print("Первое число больше второго")
+# else:
+#     print("Нет")
+
+
+# def check_password(password):
+#     has_apper = False
+#     has_lower = False
+#     has_num = False
+#
+#     for ch in password:
+#         if "A" <= ch <= "Z":
+#             has_apper = True
+#         elif "a" <= ch <= "z":
+#             has_lower = True
+#         elif "0" <= ch <= "9":
+#             has_num = True
+#
+#     if len(password) >= 8 and has_apper:
+#         return True
+#     return False
+#
+#
+# p = input("Введите пароль")
+# if check_password(p):
+#     print("Это надежный пароль")
+# else:
+#     print("Ненадежный пароль")
+
+
+# Занятие 7 часть 2
+
+# def get_sum(a, b, c, d):
+#     return a + b + c + d
+#
+#
+# print(get_sum(1, 5, 2, 7))
+# print(get_sum(1, 5, 2))
+
+
+# def get_sum(a, b=2, c=0, d=1):
+#     return a + b + c + d
+#
+#
+# print(get_sum(1, 5, 2, 7))
+# print(get_sum(1, 5, 2))
+# print(get_sum(1, d=2))
+# print(get_sum(1, d=2, b=5))
+# n = 2
+# m = 5
+# print(get_sum(1, d=n, b=m))
+
+# def set_param(c=20, s="-"):
+#     for i in range(c):
+#         print(s, end="")
+#     print()
+#
+#
+# set_param(10, "+")
+# set_param(5, "*")
+# set_param(15, "#")
+# set_param(7)
+# set_param()
+# set_param(s="?")
+
+# def digits_sum(n, even=True):
+#     s = 0
+#     while n > 0:
+#         cur_digit = n % 10
+#         if even and cur_digit % 2 == 0:
+#             s += cur_digit
+#         elif not even and cur_digit % 2 != 0:
+#             s += cur_digit
+#         n //= 10
+#     return s
+#
+#
+# print("Сумма четных чифр")
+# print(digits_sum(9874023))
+# print(digits_sum(38271))
+# print(digits_sum(123456789))
+# print("Сумма нечетных чифр")
+# print(digits_sum(9874023, even=False))
+# print(digits_sum(38271, even=False))
+# print(digits_sum(123456789, even=False))
+
+# def display_info(name, age):
+#     print("Name", name, "\nAge", age)
+#
+# display_info("Ira", 23)
+# display_info(28, "Ira")
+# display_info(age=23, name="Ira")
+# display_info("Igor", age=23, name="Ira")
+
+# типы переменных (изменяемые и не изменяемые)
+
+# a = 5
+# print(a, id(a))
+# a = 6
+# print(a, id(a))
+#
+# lst1 = [1, 2, 3]
+# print(lst1, id(lst1))
+# lst1.extend([4, 5, 6])
+# print(lst1, id(lst1))
+# lst2 = [4, 5, 6]
+# print(lst2, id(lst2))
+
+# a = "Hello"
+# b = "Hello"
+# print(a == b)
+# print(a is b)
+# print(id(a))
+# print(id(b))
+#
+# a = [1, 2, 3]
+# b = [1, 2, 3]
+# print(a == b)
+# print(a is b)
+# print(id(a))
+# print(id(b))
+#
+# a = 5
+# b = 5
+# print(a == b)
+# print(a is b)
+# print(id(a))
+# print(id(b))
+
+# Изменяемые типы данных - list
+# Неизменяемые типы данных - int, str, float, bull
+
+# st = "Hello"
+# print(st[-1])
+# st[-1] = 'o' # так изменить не получится
+
+# st = "Hello"
+# st = list(st)
+# print(st[-1])
+# st[-1] = "q"
+# print(st)
+# try:
+#     sq = int(input("Введите номер: 1- прямоугольник, 2- круг, 3- треугольник"))
+#     print(sq)
+#     if 3 >= sq >= 1:
+#         if sq == 1:
+#             try:
+#                 a = int(input("Введите длину стороны а: "))
+#                 b = int(input("Введите длину стороны b: "))
+#
+#                 def rectangle(c, d):
+#                     return a * b
+#
+#
+#                 print(rectangle(a, b))
+#
+#             except ValueError:
+#                 print("Введено неверное значение")
+#         if sq == 2:
+#             try:
+#                 pi = round(math.pi, 2)
+#                 r = int(input("Введите радиус: "))
+#
+#
+#                 def circle(j, k):
+#                     return pi * (r ** 2)
+#
+#
+#                 print(circle(pi, r))
+#             except ValueError:
+#                 print("Введено неверное значение")
+#         if sq == 3:
+#             try:
+#                 h = int(input("Введите высоту: "))
+#                 w = int(input("Введите длину основания: "))
+#
+#
+#                 def triangle(i, f):
+#                     return (h * w) // 2
+#
+#
+#                 print(triangle(h, w))
+#             except ValueError:
+#                 print("Введено неверное значение")
+#     else:
+#         print("Введено неверное число")
+# except ValueError:
+#     print("Введено неверное значение")
+
 
 # занятие 11
-
+#
 # домашнее задание
 # def outer(a, b, c):
 #      def inner(x, y):
@@ -823,18 +1028,18 @@ print(change(['с', 'л', 'о', 'н']))
 #      return s
 #
 # print(outer(2, 4, 6))
-
- # Занятие 11. Замыкание
-
- # def outer(n):
- #      def inner(x):
- #           return n + x
- #
- #      return inner
- #
- # i = outer(5)
- # print(i(10))
-
+#
+# Занятие 11. Замыкание
+#
+# def outer(n):
+#      def inner(x):
+#           return n + x
+#
+#      return inner
+#
+# i = outer(5)
+# print(i(10))
+#
 # def func1():
 #     a = 1
 #     b = "line"
@@ -852,7 +1057,7 @@ print(change(['с', 'л', 'о', 'н']))
 #
 # func = func1()
 # print(func())
-
+#
 # def func(city):
 #     s = 0
 #
@@ -869,7 +1074,7 @@ print(change(['с', 'л', 'о', 'н']))
 # res1()
 # res2 = func("Сочи")
 # res2()
-
+#
 # students = {
 #     "Alex": 90,
 #     "Sergey": 67,
@@ -893,7 +1098,7 @@ print(change(['с', 'л', 'о', 'н']))
 # print(bal_B(students))
 # print(bal_C(students))
 # print(bal_D(students))
-
+#
 # def func(a, b):
 #     def add():
 #         return a + b
@@ -918,9 +1123,9 @@ print(change(['с', 'л', 'о', 'н']))
 # print(obj1.add())# сумма
 # print(obj1.sub())# разность
 # print(obj1.nul())# произведение
-
+#
 # анонимные функции (лямбда выражения)
-
+#
 # def suma(x, y):
 #     return x + y
 #
@@ -934,14 +1139,14 @@ print(change(['с', 'л', 'о', 'н']))
 # a = lambda x, y: x + y # так использовать не рекоменжуется
 #
 # print(a(1, 2))
-
+#
 # c = (lambda x: x * 2, # кортеж из лямбда выражений
 #      lambda x: x * 3,
 #      lambda x: x * 4)
 #
 # for t in c:
 #     print(t("abc "))
-
+#
 # def outer(n):
 #     def inner(x):
 #         return x + n
@@ -951,23 +1156,23 @@ print(change(['с', 'л', 'о', 'н']))
 #
 # f = outer(42)
 # print(f(1))
-
+#
 # def outer1(n):
 #     return lambda x: x + n
 #
 # f1 = outer1(42)
 # print(f1(1))
-
+#
 # outer2 = lambda n: lambda x: x + n
 #
 #
 # f2 = outer2(42)
 # print(f2(1))
-
+#
 # print((lambda n: lambda x: x + n)(42)(1))
-
+#
 # print((lambda a: lambda b: lambda c: a + b + c)(2)(4)(6))
-
+#
 # d = {"c": 10, "a": 15, "b": 4}
 # # d = sorted(d) # этот метод не подходит для словаря
 # # print(d)
@@ -978,8 +1183,8 @@ print(change(['с', 'л', 'о', 'н']))
 # print(q)
 # d1 = dict(q)
 # print(d1)
-
-
+#
+#
 # players = [
 #     {"name": "Антон", "last name": "Бирюков", "rating": 9},
 #     {"name": "Алексей", "last name": "Бодня", "rating": 10},
@@ -992,11 +1197,11 @@ print(change(['с', 'л', 'о', 'н']))
 #
 # res2 = sorted(players, key=lambda item: item["rating"], reverse=True)
 # print(res2)
-
+#
 # a = [(lambda x, y: x + y), (lambda x, y: x - y), (lambda x, y: x * y), (lambda x, y: x / y)]
 # b = a[3](12, 5)
 # print(b)
-
+#
 # d = {
 #     1: lambda: print("Понедельник"),
 #     2: lambda: print("Вторник"),
@@ -1008,12 +1213,12 @@ print(change(['с', 'л', 'о', 'н']))
 # }
 #
 # d[2]()
-
-
+#
+#
 # Готовые функции
-
-#map (func, iter), filter(func, iter)
-
+#
+# map (func, iter), filter(func, iter)
+#
 # def nult(t):
 #     return t * 2
 #
@@ -1022,7 +1227,7 @@ print(change(['с', 'л', 'о', 'н']))
 #
 # a = list(map(nult, lst))
 # print(a)
-
+#
 # def args_decorator(fn):
 #     def wrap(arg1, arg2):
 #         print(arg1, arg2)
@@ -1037,7 +1242,7 @@ print(change(['с', 'л', 'о', 'н']))
 #
 #
 # print_full_name("Ирина", "Резникова")
-
+#
 # def argd_decorator(fn):
 #     def wrap(*args, **kwargs):
 #         print("args", args)
@@ -1046,8 +1251,8 @@ print(change(['с', 'л', 'о', 'н']))
 #
 #
 #     return wrap
-
-
+#
+#
 # @argd_decorator
 # def print_full_name(a, b, c, study="Python"):
 #     print(a, b, c, "изучает", study, "\n")
@@ -1074,9 +1279,9 @@ print(change(['с', 'л', 'о', 'н']))
 #
 # summa(5, 2)
 # sub(5, 2)
-
-#Создать декоратор который будет принимать в виде аргумента число которое будет умножаться на число принимаемое функцией
-
+#
+# Создать декоратор который будет принимать в виде аргумента число которое будет умножаться на число принимаемое функцией
+#
 # def multiply(arg): #3
 #     def outer(func):
 #         def wrap(*args, **kwargs):
@@ -1092,7 +1297,7 @@ print(change(['с', 'л', 'о', 'н']))
 #
 #
 # print(return_num(5))
-
+#
 # Проверка типов данных
 # def typed(*args, **kwargs):
 #     def outer(fn):
@@ -1132,10 +1337,10 @@ print(change(['с', 'л', 'о', 'н']))
 # print(typed_fn2("Hello", "hello", "!"))
 #
 # print(typed_fn3("Hello", "hello", z=5))
-
-
+#
+#
 # Системы исчислений
-
+#
 # print(int("100", 2))
 # print(int("100", 8))
 # print(int("100", 16))
@@ -1147,17 +1352,17 @@ print(change(['с', 'л', 'о', 'н']))
 # print(0b1010)
 # print(0o22)
 # print(0x12)
-
+#
 # Префиксы строк
-
+#
 # print("C:\folder\file.txt")
 # print("C:\\folder\\file.txt") #чтобы отображался надо экранировать
 # print(r"C:\folder\file.txt") # можно не экранировать а указать r
 #
 # print("C:\folder\file.txt\\"[:-1])
 # print(r"C:\folder\file.txt"* '\\')
-
-
+#
+#
 # name = "Дмитрий"
 # age = 28
 # print('Меня зовут', name, "мне", age, "лет", sep='')
@@ -1166,16 +1371,16 @@ print(change(['с', 'л', 'о', 'н']))
 #
 # printprint(f'Число: {round(10/3, 2)}')
 #      print(f'Число: {10/3:.2f}')
-
-
+#
+#
 # print("Hello Github")
-
+#
 # print("Все получилось")
-
+#
 # print("Стока созданная в новом репозитории")
-
+#
 # Занятие 14
-
+#
 # def avg(fn):
 #      def wrap(*args):
 #          # a = ""
@@ -1196,7 +1401,7 @@ print(change(['с', 'л', 'о', 'н']))
 #
 #
 # summa(2, 3, 3, 4)
-
+#
 # print("Строка разделенная пробелами:".split()) # Разбивает стоку на список подстрок
 # print("www.python.org.ru".split(".", 2))
 # print("www.python.org.ru".rsplit(".", 2))
@@ -1209,65 +1414,65 @@ print(change(['с', 'л', 'о', 'н']))
 #
 # s = "Я изучаю Nython. Мне нравится Nython. Nython очень интересный язык программирования"
 # print(s.replace('Nython', 'Python', 2)) #Поиск и замена
-
+#
 # join - Преобразует итерируемый обьект в строку
 # s = '_'
 # seq = ('a','b','c')
 # print(s.join(seq))
 #
 # print("...".join(['1', '99']))
-
+#
 # a = input("->").split()
 # print(a)
-
+#
 # a = input("Введите ФИО: ").split()
 # print(a)
 # print(f'{a[0]} {a[1][0]}. {a[2][0]}.')
-
+#
 # Занятие 14 часть 2
-
+#
 # Регулярные выражения
-
-import re
-
-# s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
-# reg = 'совпадения'
-# print(re.findall(reg, s)) # findall возвращает список всех найденных совпадений
-# print(re.search(reg, s)) # Возвращает первое совпадение с искомым шабдоном
-# print(re.search(reg, s).span())
-# print(re.search(reg, s).start())
-# print(re.search(reg, s).end())
-# print(re.search(reg, s).group())
-# print(re.match(reg, s).)# Возвращает первое совпадение с искомым шаблоном только в начале строки
-
-import re
-
-# s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
-# reg = ' '
-# ...
-# s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
-# reg = '[иае]'
-# ...
-# print(re.split(reg, s, 5))
-
-#Метод для поиска и замены
 #
-# s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
-# reg = '\\.'# reg = r'.'
+# import re
 #
-# print(re.findall(reg, s))# findall возвращает список всех совпадений или []
-# print(re.search(reg, s))# search возвращает первое совпадение с искомым шаблоном
-# print(re.search(reg, s).span())
-# print(re.search(reg, s).start())
-# print(re.search(reg, s).end())
-# print(re.search(reg, s).group())
-# print(re.match(reg, s))#match возвращает первое совпадение с искомым шаблоном только в начале строки
+# # s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
+# # reg = 'совпадения'
+# # print(re.findall(reg, s)) # findall возвращает список всех найденных совпадений
+# # print(re.search(reg, s)) # Возвращает первое совпадение с искомым шабдоном
+# # print(re.search(reg, s).span())
+# # print(re.search(reg, s).start())
+# # print(re.search(reg, s).end())
+# # print(re.search(reg, s).group())
+# # print(re.match(reg, s).)# Возвращает первое совпадение с искомым шаблоном только в начале строки
 #
-# print(re.split(reg, s, 5))#Разбивает строку на список подстрок по заданному шаблону
+# import re
 #
-# print(re.sub(reg, "!", s))
-
-# Шаблоны регулярных выражений
+# # s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
+# # reg = ' '
+# # ...
+# # s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
+# # reg = '[иае]'
+# # ...
+# # print(re.split(reg, s, 5))
+#
+# # Метод для поиска и замены
+# #
+# # s = "Я ищу совпадения в 2023 году. И я их найду в 2 счёта."
+# # reg = '\\.'# reg = r'.'
+# #
+# # print(re.findall(reg, s))# findall возвращает список всех совпадений или []
+# # print(re.search(reg, s))# search возвращает первое совпадение с искомым шаблоном
+# # print(re.search(reg, s).span())
+# # print(re.search(reg, s).start())
+# # print(re.search(reg, s).end())
+# # print(re.search(reg, s).group())
+# # print(re.match(reg, s))#match возвращает первое совпадение с искомым шаблоном только в начале строки
+# #
+# # print(re.split(reg, s, 5))#Разбивает строку на список подстрок по заданному шаблону
+# #
+# # print(re.sub(reg, "!", s))
+#
+# # Шаблоны регулярных выражений
 
 # s = "Я ищу совпадения в 2023 году. И [^] я их найду в 2 счёта.47896"
 # reg = r'[203]'
@@ -1294,7 +1499,7 @@ import re
 # # reg = r'\d\w\s'
 #
 # print(re.findall(reg, s))
-#\d - одна любая ц))ифра
+# \d - одна любая ц))ифра
 # \w - буквы, цифры, символ подчеркивания
 # \s - символ пробельный , табуляция , перенос на другую строку
 # \D\W\S - в верхнем регистре выполняет противоположное действие букве в нижнем регистре
@@ -1331,7 +1536,7 @@ import time
 # print(re.findall(req, s)) #['12', '', '', '', '', '', '', '', '', '', '', '2023', '', '', '', '', '', '4567', '891', '']
 # цифры выводятся а вместо букв пробельные символы
 
-#номера телефона
+# номера телефона
 
 # s = "+7 499 456 45 76, +74994564576, 7 (499) 456 4576, 74994564576"
 # reg = r"\+?7\d{10}"
@@ -1350,7 +1555,7 @@ import time
 # print(walidate_login('@#%Pyt'))
 
 
-#flags
+# flags
 
 # print(re.findall(r'\w+', '12 + й'))
 # print(re.findall(r'\w+', '12 + й', flags=re.ASCII))
@@ -1380,7 +1585,7 @@ import time
 # [a-z_-]+# можно оставить свой комменарий
 # """, 'test@mail.ru', re.VERBOSE))
 
-#Занятие 16 часть 2
+# Занятие 16 часть 2
 
 # text = """Python,
 # python,
@@ -1462,7 +1667,7 @@ import time
 # print(re.sub(r'\s*(\w+)\s*', repl_find, text))
 
 
-#Занятие 17
+# Занятие 17
 
 
 # s = '<p>Изображение <img alt="картинка" src="bg.jpg" > - фон страницы </p>'
@@ -1483,7 +1688,7 @@ import time
 
 # Текстовые и бинарные
 
-#Открытие файла "Open"
+# Открытие файла "Open"
 
 # # f = open("C:/Users/New/PycharmProjects/pythonProject/test.txt")
 # f = open('test.txt')
@@ -1741,7 +1946,7 @@ import os
 
 # Занятие 18 часть 2
 
- # print(os.path.join(r'D:\Python', 'nested1', 'nested2', 'text.txt'))
+# print(os.path.join(r'D:\Python', 'nested1', 'nested2', 'text.txt'))
 
 # dirs = [r'work\f1', r'work\f2\f21']
 # for d in dirs:
@@ -1771,7 +1976,6 @@ import os
 #           print(dirs)
 #           print(file)
 #      print('-' * 50)
-
 
 
 # print_tree('work', topdown=False)
@@ -1818,11 +2022,10 @@ import os
 # print(objs)
 
 
-
-     # if os.path.isfile(p):
-     #      print(f'{obj} - file - {os.path.getsize(p)} bytes')
-     # else:
-     #      print(f'{obj} - dir')
+# if os.path.isfile(p):
+#      print(f'{obj} - file - {os.path.getsize(p)} bytes')
+# else:
+#      print(f'{obj} - dir')
 
 
 # dir_name = "nested1"
@@ -1872,9 +2075,9 @@ import os
 #     print(file)
 
 
-     #      print(f'{objs} - file - {os.path.getsize(p)} bytes')
-     # else:
-     #      print(f'{objs} - dir')
+#      print(f'{objs} - file - {os.path.getsize(p)} bytes')
+# else:
+#      print(f'{objs} - dir')
 
 
 # Занятие 26 часть 2

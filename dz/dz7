@@ -1,0 +1,47 @@
+try:
+    sq = int(input("Введите номер: 1- прямоугольник, 2- круг, 3- треугольник"))
+    print(sq)
+    if 3 >= sq >= 1:
+        if sq == 1:
+            try:
+                a = int(input("Введите длину стороны а: "))
+                b = int(input("Введите длину стороны b: "))
+
+                def rectangle(c, d):
+                    return a * b
+
+
+                print(rectangle(a, b))
+
+            except ValueError:
+                print("Введено неверное значение")
+        if sq == 2:
+            try:
+                pi = round(math.pi, 2)
+                r = int(input("Введите радиус: "))
+
+
+                def circle(j, k):
+                    return pi * (r ** 2)
+
+
+                print(circle(pi, r))
+            except ValueError:
+                print("Введено неверное значение")
+        if sq == 3:
+            try:
+                h = int(input("Введите высоту: "))
+                w = int(input("Введите длину основания: "))
+
+
+                def triangle(i, f):
+                    return (h * w) // 2
+
+
+                print(triangle(h, w))
+            except ValueError:
+                print("Введено неверное значение")
+    else:
+        print("Введено неверное число")
+except ValueError:
+    print("Введено неверное значение")
