@@ -1017,6 +1017,102 @@ from random import *
 # except ValueError:
 #     print("Введено неверное значение")
 
+# Занятие 8
+
+# Кортеж
+#  относится к неизменяемым типам данных
+
+# lst = [10, 20, 30]
+# tpl = (10, 20, 30)
+# print(type(tpl))
+# print(lst.__sizeof__())
+# print(tpl.__sizeof__())
+a = ()
+
+
+# print(type(a))
+# a = 4, 5, 6, 7
+# print(a)
+# print(type(a))
+# a = tuple("Hello")
+# print(a)
+# a = tuple((2, 5, 7, 9, 3))
+# print(a)
+# print(a[-1])
+# print(a[1:3])
+
+# s = tuple([input("=>") for i in range(5)])
+# print(s)
+# s = tuple(input("=>") for i in range(5))
+# print(s)
+
+# from random import randint
+
+# s = tuple(randint(0, 10) for i in range(5))
+# print(s)
+
+# s = tuple(2 ** i for i in range(1, 13))
+# print(s)
+
+# t1 = tuple("Hello")
+# t2 = tuple("world")
+# t1 = t1 + t2
+# print(t1)
+# print(t1 * 2)
+# print(t1.count('l'))
+# print(t1.index('l'))
+# print(t1.index('l', 3))
+# ch = 'a'
+# if ch in t2:
+#     print(t2.index(ch))
+# else:
+#     print("Такого символа нет")
+#
+# for i in t2:
+#     print(i * 2, end=" ")
+
+# def sliser(tpl, el):
+#     if el in tpl:
+#         if tpl.count(el) > 1:
+#             first = tpl.index(el)
+#             second = tpl.index(el, first + 1)
+#             return tpl[first:second + 1]
+#         else:
+#             return tpl[tpl.index(el):]
+#
+#     else:
+#         return ()
+#
+#
+# print(sliser((1, 2, 3), 8))
+# print(sliser((1, 8, 3, 4, 8, 8, 9, 2), 8))
+# print(sliser((1, 2, 8, 5, 1, 2, 9), 8))
+
+
+# s1 = tuple(randint(0, 5) for i in range(10))
+# print(s1)
+#
+# s2 = tuple(randint(-5, 0) for i in range(10))
+# print(s2)
+
+# def ren(a, b):
+#     return tuple(randint(a, b) for i in range(10))
+#
+#
+# tpl1 = ren(0, 5)
+# tpl2 = ren(-5, 0)
+# print(tpl1)
+# print(tpl2)
+# tpl3 = tpl1 + tpl2
+# print(tpl3)
+# print("0 =", tpl3.count(0))
+
+# t = (10, 11, [1, 2, 3], [4, 5, 6], ["Hello", "world"])
+# print(t, id(t))
+# t[4][0] = "new"
+# t[4].append("hi")
+# print(t, id(t))
+
 
 # занятие 11
 #
