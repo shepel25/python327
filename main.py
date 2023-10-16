@@ -1029,7 +1029,6 @@ from random import *
 # print(tpl.__sizeof__())
 a = ()
 
-
 # print(type(a))
 # a = 4, 5, 6, 7
 # print(a)
@@ -1113,7 +1112,133 @@ a = ()
 # t[4].append("hi")
 # print(t, id(t))
 
+# Занятие 8 часть 2
 
+# t = (1, 2, 3)
+# # x = t[0]
+# # y = t[1]
+# # z = t[2]
+# # print(x, y, z)
+# x, y, z = t  # Распаковка кортежей
+# print(x, y, z)
+
+# def get_user():
+#     name = "Tom"
+#     age = 22
+#     is_married = False
+#     return name, age, is_married
+#
+#
+# # user = get_user()
+# # print(user)
+# # print(user[0])
+# # print(user[1])
+# # print(user[2])
+# # n, year, married = user
+# n, year, married = get_user() # чуть проще
+# print(n, year, married)
+
+
+# tpl = (10, 20, 30)
+# del tpl # Полностью удаляет ссылку на кортеж
+# print(tpl)
+
+# tpl = (10, 20, 30)
+# lst = list(tpl) # преобразовали кортеж в список
+# lst.append(40) # добавили элемент в конец списка
+# print(lst)
+# tpl = tuple(lst) # преобразовали список обратно в кореж
+# print(tpl)
+
+# countries = (
+#     ("Германия", 86.2, (("Берлин", 3.226),("Гамбург", 1.718))),
+#     ("Франция", 66, (("Париж", 2.2), ("Марсель", 1.6)))
+# )
+#
+# for country in countries:
+#     coutry_name, country_population, citties = country
+#     print("\nСтрана: ", coutry_name, "Население: ", country_population, sep=" ")
+#     for cyti in citties:
+#         cyti_name, city_population = cyti
+#         print("\nГород: ", cyti_name, "Население: ", city_population, sep=" ")
+
+
+# Множество (set)
+
+# s = {"banana", "apple", "orange", "banana", "apple"}
+# print(s)
+# print(type(s))
+# for i in s:
+#     print(i)
+
+# a = set()
+# print(a)
+# print(type(a))
+
+# s = {i f'A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in s if i[1] == 'c']or i in range(10)} # сгенерировали множество
+# print(s)
+
+# s = {i ** 2 for i in range(10)} # сгенерировали множество
+# print(s)
+# print(64 in s)
+
+# s = ['ab_1', 'ac_2', 'bc_1', 'bc_2']
+# # a = {i for i in s if 'a' in i}
+# # a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in s]
+# a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in s if i[1] == 'c']
+# print(a)
+# for i in s:  # Расшифровка ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in s if i[1] == 'c']
+#     if i[1] == "c":
+#         if i[0] == "a":
+#             print("A" + i[1:])
+#         else:
+#             print("B" + i[1:])
+
+# a = {"Tom", "Bob", "Alice"}
+# a.add("Sam")  # Добавление в множество
+# print(a)
+# a.remove("Tom")  # Удаление элемента
+# # a.remove("Ann")  # KeyError
+# print(a.pop())
+# a.clear()  # Удаляет данные в множестве , множество остается
+# print(a)
+
+# a = {0, 1, 2, 3}
+# b = {4, 3, 2, 1}
+# # c = a.union(b) # => c = a | b оператор сложения только для множества
+# # print(c)
+# # a |= b
+# # print(a)
+# a = a & b # возврашает уникальные элементы входящие только в список a
+# c = a ^ b # возвращает уникальные  элементы для списков a и b
+# # c = a - b # возвращает элементы входящие только в первый список
+#
+# print(c)
+
+# s1 = {1, 2}
+# s2 = {3}
+# s3 = {4, 5}
+# s4 = {3, 2, 6}
+# s5 = {6}
+# s6 = {7, 8}
+# s7 = {9, 8}
+#
+# s = s1 | s2 | s3 | s4 | s5 | s6 | s7 # или s = s1.union(s2,s3,s4,s5,s6,s7)
+# print(s)
+# print(len(s))
+# print(min(s))
+# print(max(s))
+
+tpl1 = tuple('253523651')
+print(tpl1)
+lst = []
+for i in tpl1:
+    if i not in lst:
+        lst.append(i)
+        res = tpl1.count(i)
+        print("Количество", i, "=", res)
+
+#
 # занятие 11
 #
 # домашнее задание

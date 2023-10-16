@@ -1,0 +1,8 @@
+tpl1 = tuple('253523651')
+print(tpl1)
+lst = []
+for i in tpl1:
+    if i not in lst:
+        lst.append(i)
+        res = tpl1.count(i)
+        print("Количество", i, "=", res)
