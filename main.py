@@ -1229,14 +1229,136 @@ a = ()
 # print(min(s))
 # print(max(s))
 
-tpl1 = tuple('253523651')
-print(tpl1)
-lst = []
-for i in tpl1:
-    if i not in lst:
-        lst.append(i)
-        res = tpl1.count(i)
-        print("Количество", i, "=", res)
+# tpl1 = tuple('253523651')
+# print(tpl1)
+# lst = []
+# for i in tpl1:
+#     if i not in lst:
+#         lst.append(i)
+#         res = tpl1.count(i)
+#         print("Количество", i, "=", res)
+
+
+# Занятие 9
+
+# s = frozenset([1, 2, 3, 4, 5])
+# print(s)
+# s = frozenset({"Hello", "world"})
+# print(s)
+# s = frozenset({i ** 2 for i in range(10)})
+# print(s)
+
+
+# Словарь (dict)
+
+# lst = [1, 2, 3]
+# d = {'one': 1, 'two': 2, 3: 0}
+# print(type(d))
+# print(lst[0])
+# print(d['one'])
+# print(lst[2])
+# print(d[3])
+
+# d = {}
+# print(d)
+# print(type(d))
+#
+# d1 = dict()
+# print(d1)
+# print(type(d1))
+#
+# d2 = dict(one=1, two=2)
+# print(d2)
+# print(type(d2))
+
+# users = ['a', 'b', 'c', 'd', 'e', 'f']
+# print(users)
+# d_users = dict(users)
+# print(d_users) # так преобразовать не получится , нет ключей и выскочит valueerror
+
+# users = [('a', 'b'), ['c', 'd'], ['e', 'f']]
+# print(users)
+# d_users = dict(users)
+# print(d_users)
+#
+# lst = list(d_users)
+# print(lst) # Преобразует словарь в список , но выведет только список ключей
+
+# d = {i: i ** 2 for i in range(7)}
+# print(d)
+# print(d[4])
+# d[4] = 20
+# print(d)
+
+# d = {0: 'text', 'one': 1, (1, 2, 3): 'кортеж', 'список': [2, 3, 7, 4]}
+# print(d)
+# print(d[(1, 2, 3)])
+# print(d['список'][2])
+# Ключами не могут быть объекты с изменяемым типом данных
+# Ключи одинаковыми быть не могут
+# print('one' in d) # True
+# print(
+# 'one1' in d) # False
+# print('text' in d) # False
+# del d[0]
+# print(d)
+# print(d['one1']) # Если элемент не существует то выскочит ошибка keyerror
+
+# d = {'one': 1, 'two': 2, 'three': 3}
+# for i in d:
+#     print(i) # получим ключи текущих элементов
+# print(i, d[i]) # получим ключи и значения
+
+# for key in d:
+#     print(key)
+#     print(key, d[key])
+
+# key = 'four'
+# if key in d:
+#     del d[key]
+#
+# print(d)
+
+# d = {'one': 1, 'two': 2, 'three': 3}
+# key = 'four'
+# if key in d:
+#     del d[key]
+#
+# print(d)
+
+# d = {'one': 1, 'two': 2, 'three': 3}
+# key = 'three'
+#
+# try:
+#     del d[key]
+# except KeyError:
+#     print("Элемента с ключом", key, "нет в словаре")
+# print()
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5, 'x4': -1}
+# print(d)
+#
+# res = 1
+# for key in d:
+#     res *= d[key]
+#
+# print(res)
+
+# d = dict()
+# d[1] = input("->")
+# d[2] = input("->")
+# d[3] = input("->")
+# d[4] = input("->")
+# d = {i: input("->")for i in range(1, 5)}
+# print(d)
+# dislike = int(input("Какой элемент исключить: "))
+# del d[dislike]
+# print(d)
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5, 'x4': -1}
+# print(d)
+# print(len(d))
+# print(min(d))
 
 #
 # занятие 11
