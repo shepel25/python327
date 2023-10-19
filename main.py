@@ -1360,7 +1360,108 @@ a = ()
 # print(len(d))
 # print(min(d))
 
+# Занятие 9 часть 2
+
+# goods = {
+#     '1': ['Core-i3-4330', 9, 4500],
+#     '2': ['core-i5-4670', 3, 8500],
+#     '3': ['AMD FX-6300', 6, 3700],
+#     '4': ['Pentium G3230', 8, 2100],
+#     '5': ['Core-i5-3460', 5, 6800]
+# }
 #
+# for i in goods:
+#     print(i, ")", goods[i][0], "-", goods[i][1], " шт. по ", goods[i][2], "руб", sep="")
+#
+# while True:
+#     n = input("№: ")
+#     if n != '0':
+#         k = int(input("Количество: "))
+#         goods[n][1] += k
+#     else:
+#         break
+#
+# for i in goods:
+#     print(i, ")", goods[i][0], "-", goods[i][1], " шт. по ", goods[i][2], "руб", sep="")
+
+# d = {3: 'x1', 7: 'x2', 5: 'x3', -1: 'x4'}
+# print(d)
+# # print(d.keys()) #список ключей
+# # print(d.values()) #список значений
+# # print(d.items()) # список и ключей и значений одновременно в виде кортежа
+# for i, j in d.items():
+#     print(i, j)
+#
+# print(list(d.values())) # получим список значений
+# print(list(d.items())) # получим список ключей и значений в виде кортежей
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+# d2 = d.copy()
+#
+# d2['b'] = 5
+#
+# print("D =", d)
+# print("D2 =", d2)
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+# print(d)
+# # d.update({'r': 7, 't': 9}) # update - обновление словаря
+# # print(d)
+# # d.update({'a': 7, 'f': 4})
+# d.update([('b', 5), ('q', 4)])
+# print(d)
+
+# x = {'a': 1, 'b': 2}
+# y = {'b': 3, 'c': 4}
+# z = x.copy()
+# print(z)
+# z.update(y)
+# print(z)
+# z = x | y
+# print(z)
+
+# x = {'a': 1, 'b': 2}
+# print(x)
+# # x.clear() # clear - очищает словарь полностью
+# # item = x.pop('b') # pop - удаляет ключ и значение по ключу, возвращается значение
+# # item = x.pop('e', 'Такого ключа нет')
+# item = x.popitem()  # popitem - удаляет последние ключ и значени и возвращает кортеж из удаляемых элементов
+# print(item)
+# print(x)
+
+# d = {'name': 'Kelly', 'age': 25, 'salary': 8000, 'city': 'Ney York'}
+# new_d = dict()
+#
+# # new_d['name'] = d.pop('name')
+# # new_d['salaru'] = d.pop('salary')
+#
+# new_d = {'name': d.pop('name'), 'salary': d.pop('salary')} # вариант 2
+#
+# print(d)
+# print(new_d)
+
+# d = {'name': 'Kelly', 'age': 25, 'salary': 8000, 'city': 'Ney York'}
+# d['location'] = d.pop('city') # изменение названия ключа
+# print(d)
+
+# a = {
+#     'first': {
+#         1: 'one',
+#         2: 'two',
+#         3: 'three'
+#     },
+#     'second': {
+#         4: 'four',
+#         5: 'five'
+#     }
+# }
+# print(a)
+#
+# for x in a:
+#     print(x)
+#     for y in a[x]:
+#         print("\t", y, ":", a[x][y], sep="")
+
 # занятие 11
 #
 # домашнее задание
