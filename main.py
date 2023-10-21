@@ -1433,7 +1433,7 @@ a = ()
 # new_d = dict()
 #
 # # new_d['name'] = d.pop('name')
-# # new_d['salaru'] = d.pop('salary')
+# # new_d['salary'] = d.pop('salary')
 #
 # new_d = {'name': d.pop('name'), 'salary': d.pop('salary')} # вариант 2
 #
@@ -1461,6 +1461,54 @@ a = ()
 #     print(x)
 #     for y in a[x]:
 #         print("\t", y, ":", a[x][y], sep="")
+#
+d = {
+    'John': {'N': 3056,
+             'S': 8463,
+             'W': 2694,
+             'E': 8441
+             },
+    'Tom': {'N': 4832,
+            'S': 6786,
+            'W': 3612,
+            'E': 4737
+            },
+    'Anne': {'N': 5239,
+             'S': 4802,
+             'W': 1859,
+             'E': 5820
+             },
+    'Fiona': {'N': 3904,
+              'S': 3645,
+              'W': 2451,
+              'E': 8821
+              }
+
+}
+for x in d:
+    print(x)
+    for y in d[x]:
+        print("\t", y, ":", d[x][y], sep="")
+
+print()
+
+n = input("Введите имя:")
+s = ['John', 'Tom', 'Anne', 'Fiona']
+r = ['N', 'S', 'W', 'E']
+if n in s:
+    k = input("Введите регион продаж значение которого хотите изменить: ")
+
+    if k in r:
+        print(d[n][k])
+        new = int(input("Введите новое значение:"))
+        d[n][k] = new
+        print(d[n])
+
+    else:
+        print("Такого региона нет в списке: ", k)
+
+else:
+    print('Такого имени нет в списке:', n)
 
 # занятие 11
 #
