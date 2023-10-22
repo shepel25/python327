@@ -1029,6 +1029,7 @@ from random import *
 # print(tpl.__sizeof__())
 a = ()
 
+
 # print(type(a))
 # a = 4, 5, 6, 7
 # print(a)
@@ -1462,53 +1463,185 @@ a = ()
 #     for y in a[x]:
 #         print("\t", y, ":", a[x][y], sep="")
 #
-d = {
-    'John': {'N': 3056,
-             'S': 8463,
-             'W': 2694,
-             'E': 8441
-             },
-    'Tom': {'N': 4832,
-            'S': 6786,
-            'W': 3612,
-            'E': 4737
-            },
-    'Anne': {'N': 5239,
-             'S': 4802,
-             'W': 1859,
-             'E': 5820
-             },
-    'Fiona': {'N': 3904,
-              'S': 3645,
-              'W': 2451,
-              'E': 8821
-              }
+# d = {
+#     'John': {'N': 3056,
+#              'S': 8463,
+#              'W': 2694,
+#              'E': 8441
+#              },
+#     'Tom': {'N': 4832,
+#             'S': 6786,
+#             'W': 3612,
+#             'E': 4737
+#             },
+#     'Anne': {'N': 5239,
+#              'S': 4802,
+#              'W': 1859,
+#              'E': 5820
+#              },
+#     'Fiona': {'N': 3904,
+#               'S': 3645,
+#               'W': 2451,
+#               'E': 8821
+#               }
+#
+# }
+# for x in d:
+#     print(x)
+#     for y in d[x]:
+#         print("\t", y, ":", d[x][y], sep="")
+#
+# print()
+#
+# n = input("Введите имя:")
+# s = ['John', 'Tom', 'Anne', 'Fiona']
+# r = ['N', 'S', 'W', 'E']
+# if n in s:
+#     k = input("Введите регион продаж значение которого хотите изменить: ")
+#
+#     if k in r:
+#         print(d[n][k])
+#         new = int(input("Введите новое значение:"))
+#         d[n][k] = new
+#         print(d[n])
+#
+#     else:
+#         print("Такого региона нет в списке: ", k)
+#
+# else:
+#     print('Такого имени нет в списке:', n)
 
-}
-for x in d:
-    print(x)
-    for y in d[x]:
-        print("\t", y, ":", d[x][y], sep="")
 
-print()
+# Занятие 10
 
-n = input("Введите имя:")
-s = ['John', 'Tom', 'Anne', 'Fiona']
-r = ['N', 'S', 'W', 'E']
-if n in s:
-    k = input("Введите регион продаж значение которого хотите изменить: ")
+# a = ['one', 1, 2, 3, 'two', 10, 20, 'three', 15, 36, 60, 'four', -20]
+# s = dict()
+# n = None
+#
+# for i in a:
+#     if type(i) == str:
+#         s[i] = []   # s['one] = []
+#         n = i  # n = ['one']
+#     else:
+#         s[n].append(i) # s['one'] = [1, 2, 3]
+#
+# print(s)
 
-    if k in r:
-        print(d[n][k])
-        new = int(input("Введите новое значение:"))
-        d[n][k] = new
-        print(d[n])
+# # d = zip([1, 2, 3], ['one', 'two', 'three'])
+# d = dict(zip([1, 2, 3], ['one', 'two', 'three'])) # {1: 'one', 2: 'two', 3: 'three'}
+# s = list(zip([1, 2, 3], ['one', 'two', 'three'])) # [(1, 'one'), (2, 'two'), (3, 'three')]
+# print(d)
+# print(s)
 
-    else:
-        print("Такого региона нет в списке: ", k)
+# a = ['Dec', 'Jan', 'Feb']
+# b = [12, 1, 2]
+# f = {k: v for k, v in zip(a, b)}
+# print(f)
 
-else:
-    print('Такого имени нет в списке:', n)
+# a = [1, 2, 3]
+# c = [4.8, 8.5, 9.4]
+# d = ['a', 'b', 'c']
+# b = list(zip(a, c, d))
+# print(b)
+
+# dict_one = {'name': 'Igor', 'last_name': 'Doe', 'job': 'Consultant'}
+# dict_two = {'name': 'Irins', 'last_name': 'Switch', 'job': 'Manager'}
+#
+# for (k1, v1), (k2, v2)  in zip(dict_one.items(), dict_two.items()):
+#     print(k1, '->', v1)
+#     print(k2, '->', v2)
+
+# two = [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]
+# a, b = zip(*two)
+# print(a)
+# print(b)
+
+# one = {'appel': 8.4, 'orange': 0.55}
+# two = {'paper': 0.4, 'onion': 0.35}
+# print({**one, **two}) # ** - распаковка и объединение словарей
+
+# s = ['red', 'blue', 'green']
+# j = 1
+# for i in s:
+#     print(j, ")", i)
+#     j += 1
+
+# s = ['red', 'blue', 'green']
+# # j = 1
+# for j, i in enumerate(s, start=1):
+#     print(j, ")", i)
+# j +=
+
+
+# Функции
+
+# def func(args):
+#     return args
+#
+# print(func(5))
+
+# def func(*args): # *- распаковка последовательности, принимает любое кол-во параметров
+#     return args
+#
+# print(func(5, 2, 4))
+# print(func())
+
+# def summa(*param):
+#     res = 0
+#     for i in param:
+#         res += i
+#     return res
+#
+#
+# print(summa(1, 2, 3, 4, 5, 6, 7, 8))
+# print(summa(3, 4, 5))
+# print(summa('a', 'b'))  # со строчными значениями не работает
+
+
+# def ch(*args):
+#     avarange = sum(args) / len(args)
+#     print("Среднее арифметическое: ", avarange)
+#     res = []
+#     for num in args:
+#         if avarange > num:
+#             res.append(num)
+#     return res
+#
+#
+# print(ch(1, 2, 3, 4, 5, 6, 7, 8, 9))
+# print(ch(3, 6, 1, 9, 5))
+
+# def func(a, *args):
+#     return a, args
+#
+#
+# print(func(5))  # (5, ())
+# print(func(5, 6, 7, 8, 9, 0, 1))  # (5, (6, 7, 8, 9, 0, 1))
+
+# def print_score(students, *scores):
+#     print("Student:", students, end=": ")
+#     for score in scores:
+#         print(score, end=" ")
+#     print()
+#
+#
+# print_score("Jonathan", 100, 95, 80, 92, 99)
+# print_score("Rick", 96, 20)
+
+# def func(**kwargs):
+#     return kwargs
+#
+# print(func(a=1, b=2, c=3)) # {'a': 1, 'b': 2, 'c': 3}
+# print(func()) # {}
+
+# def info(**kwargs):
+#     for k, v in kwargs.items():
+#         print(k, "is", v)
+#
+#
+# info(name="Irina", surname="Sharma", age=22, phone=123456789)
+# info(name="Igor", surname="Wood", email='fghj@mail', country='Russia', age=22, phone=1234567890)
+
 
 # занятие 11
 #
