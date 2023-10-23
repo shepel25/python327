@@ -1029,7 +1029,6 @@ from random import *
 # print(tpl.__sizeof__())
 a = ()
 
-
 # print(type(a))
 # a = 4, 5, 6, 7
 # print(a)
@@ -1642,10 +1641,154 @@ a = ()
 # info(name="Irina", surname="Sharma", age=22, phone=123456789)
 # info(name="Igor", surname="Wood", email='fghj@mail', country='Russia', age=22, phone=1234567890)
 
+# Занятие 10 часть 2
 
-# занятие 11
+# def func(a, *args, d=1, **kwargs):
+#     return a, args, kwargs, d
 #
-# домашнее задание
+#
+# print(func(5, 1, 2, 7, 8, 4, 6, d=7, b=2, c=0))
+
+# Области видимости
+
+# локальная и глобальная
+
+# name = "Tom" # Глобальная переменная
+
+# def hi():
+#     global name
+#     name = "Sam"
+#     surname = "Johnatan" # Локальная переменная
+#     print("Hello", name)
+#
+#
+# def bye():
+#     print("Good bye", name)
+#
+#
+# hi()
+# bye()
+
+# i = 5
+#
+#
+# def func(arg=i):
+#     print(arg)
+#
+#
+# i = 6
+# func()
+
+# def func(a):
+#     x = 2
+#     return a + x
+#
+#
+# print(func(3))
+
+# x = 6
+# def func(a):
+#     x = 2
+#
+#     def inner():
+#         x = 4
+#         return a + x
+#
+#     return inner()
+#
+#
+# print(func(3))
+
+# import builtins
+#
+# names = dir(builtins)
+#
+# for t in names:
+#     print(t)
+
+# Вложенные функции
+
+# def outer(who):
+#     who = "Alexandr"
+#
+#     def inner():
+#         print("Hello", who)
+#
+#     inner()
+#
+#
+# outer("World")
+
+# def fun1():
+#     a = 6 # 2
+#
+#     def fun2(b):
+#         a = 4  # 5
+#         print("Сумма", a + b) # 6
+#
+#     print("a =", a) # 3
+#     fun2(4) # 4
+#
+#
+# fun1() # 1
+
+x = 25
+
+
+# t = 0
+
+
+# def fn():
+#     global t
+#     a = 30 # 35
+#
+#     def inner():
+#         nonlocal a # Выводит локальную переменную на уровень выше
+#         a = 35
+#         print("a", a)
+#
+#     inner()
+#     t = a
+#
+#
+# fn()
+# c = x + t
+# print(c)
+
+# def fn1():
+#     x = 25
+#
+#     def fn2():
+#         x = 33
+#
+#         def fn3():
+#             nonlocal x
+#             x = 55
+#
+#         fn3()
+#         print("fn2.x", x)
+#
+#     fn2()
+#     print("fn1.x ", x)
+#
+#
+# fn1()
+
+# def outer(a1, b1, a2, b2):
+#     a = 0
+#     b = 0
+#
+#     def inner():
+#         nonlocal a, b
+#         a = a1 + a2
+#         b = b1 + b2
+#
+#     inner()
+#     return [a, b]
+#
+#
+# print(outer(2, 3, -1, 4))
+
 # def outer(a, b, c):
 #      def inner(x, y):
 #           return x * y
