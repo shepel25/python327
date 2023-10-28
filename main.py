@@ -1677,7 +1677,7 @@ a = ()
 #
 #
 # i = 6
-# func()
+# func() # 5
 
 # def func(a):
 #     x = 2
@@ -1732,18 +1732,16 @@ a = ()
 #
 # fun1() # 1
 
-x = 25
-
-
+# x = 25
+#
 # t = 0
-
 
 # def fn():
 #     global t
-#     a = 30 # 35
+#     a = 30  # 35
 #
 #     def inner():
-#         nonlocal a # Выводит локальную переменную на уровень выше
+#         # nonlocal a # Выводит локальную переменную на уровень выше
 #         a = 35
 #         print("a", a)
 #
@@ -1754,6 +1752,7 @@ x = 25
 # fn()
 # c = x + t
 # print(c)
+
 
 # def fn1():
 #     x = 25
@@ -1789,13 +1788,50 @@ x = 25
 #
 # print(outer(2, 3, -1, 4))
 
+# Вариант 1
 # def outer(a, b, c):
-#      def inner(x, y):
-#           return x * y
-#      s = 2*(inner(a, b) + inner(b, c) + inner(a, c))
-#      return s
+#     def inner(j, k):
+#         return j * k
+#
+#     summa = 2 * (inner(a, b) + inner(b, c) + inner(a, c))
+#
+#     return summa
+#
+#
+# print(outer(5, 8, 2))
+#
+#
+# Вариант 2
+# def outer(a, b, c):
+#     sq = 1
+#
+#     def inner():
+#         nonlocal sq
+#         sq = 2 * ((a * b) + (b * c) + (a * c))
+#
+#     inner()
+#
+#     return sq
+#
 #
 # print(outer(2, 4, 6))
+#
+# Вариант 3
+#
+# sq = 1
+#
+#
+# def outer(a, b, c):
+#     def inner():
+#         global sq
+#         sq = 2 * ((a * b) + (b * c) + (a * c))
+#
+#     inner()
+#
+#
+# outer(1, 8, 6)
+# print(sq)
+
 #
 # Занятие 11. Замыкание
 #
