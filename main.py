@@ -1836,10 +1836,11 @@ a = ()
 # Занятие 11. Замыкание
 #
 # def outer(n):
-#      def inner(x):
-#           return n + x
+#     def inner(x):
+#         return n + x
 #
-#      return inner
+#     return inner
+#
 #
 # i = outer(5)
 # print(i(10))
@@ -1939,6 +1940,9 @@ a = ()
 # print((lambda x, y: x + y)(1, 2))
 # print((lambda x=5, y=7: x + y)())
 # print((lambda *args: sum(args))(1, 7, 8, 9))
+print((lambda *args: 3 ** (args))(1, 7, 8, 9))
+
+
 #
 # a = lambda x, y: x + y # так использовать не рекоменжуется
 #
