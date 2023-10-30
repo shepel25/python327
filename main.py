@@ -1940,9 +1940,28 @@ a = ()
 # print((lambda x, y: x + y)(1, 2))
 # print((lambda x=5, y=7: x + y)())
 # print((lambda *args: sum(args))(1, 7, 8, 9))
-print((lambda *args: 3 ** (args))(1, 7, 8, 9))
+
+from math import pow
+
+# print((lambda *args: sum(args))(1, 7, 8, 9))
+
+# lst = [2, 8, 12, 5, 10]
+#
+lst = [3, 5, 7, 3, 9, 5, 7, 2]
+print(lst)
+s = list(map(lambda x: x ** 2, lst))
+print(s)
+s1 = list(map(lambda x: x ** 3, lst))
+print(s1)
+
+# c = (lambda x: x ** 2,  # кортеж из лямбда выражений
+#      lambda x: x ** 3)
+#
+# for t in c:
+#     print(t("abc"))
 
 
+# Занятие 11 часть 2
 #
 # a = lambda x, y: x + y # так использовать не рекоменжуется
 #
@@ -1987,7 +2006,12 @@ print((lambda *args: 3 ** (args))(1, 7, 8, 9))
 # q = list(d.items())
 # print(q)
 # # q.sort(key=lambda i: i[1], reverse=True) #reverse=True делает сортировку по убыванию , без него по возрастанию
-# # q.sort(key=sort val,reverse=True) # надо сверху дописать функцию
+
+# def sort_val(i):
+#     return i[1]
+
+
+# # q.sort(key=sort val,reverse=True) #  сверху функция sort_val
 # print(q)
 # d1 = dict(q)
 # print(d1)
@@ -2034,7 +2058,32 @@ print((lambda *args: 3 ** (args))(1, 7, 8, 9))
 # lst = [2, 8, 12, 5, 10]
 #
 # a = list(map(nult, lst))
+# a = list(map(lambda t: t*2, [2, 8, 12, 5, 10]))
 # print(a)
+
+t = (2.88, -1.75, 100.55)
+t2 = tuple(map(lambda x: int(x), t))
+print(t2)
+t3 = tuple(map(int, t))
+print(t3)
+
+st = ['a', 'b', 'c', 'd', 'e']
+num = [1, 2, 3, 4, 5]
+
+res = list(map(lambda x, y: (x, y), st, num))
+print(res)
+
+l1 = [1, 2, 3]
+l2 = [4, 5, 6]
+
+l3 = list(map(lambda x, y: x + y, l1, l2))
+print(l3)
+
+# filter(func, iter)
+
+t = ('abcd', 'abc', 'cdert', 'def', 'gfi')
+t2 = tuple(filter(lambda s: len(s) == 3, t))
+print(t2)
 #
 # def args_decorator(fn):
 #     def wrap(arg1, arg2):
