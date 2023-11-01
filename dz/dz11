@@ -1,0 +1,23 @@
+# Задание 1
+
+lst = [3, 5, 7, 3, 9, 5, 7, 2]
+print(lst)
+print()
+s = list(map(lambda x: x ** 2, lst))
+print(s)
+s1 = list(map(lambda x: x ** 3, lst))
+print(s1)
+
+# Задание 2
+
+d = [
+    {"name": "Jennifer", "final": 95},
+    {"name": "David", "final": 92},
+    {"name": "Nicolas", "final": 98}
+]
+
+res = sorted(d, key=lambda item: item["final"])
+print(res)
+
+res2 = sorted(d, key=lambda item: item["final"], reverse=True)
+print(res2)
